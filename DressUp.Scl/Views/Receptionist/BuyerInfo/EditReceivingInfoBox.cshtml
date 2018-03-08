@@ -1,0 +1,35 @@
+﻿@model ReceivingInfosVM
+<div class="editReceivingBox">
+    <div class="inputNewAddressBox" id="inputNewAddressBox">
+        <p>
+            <span class="mustInput">*</span>
+            <span>收件人&nbsp;&nbsp;&nbsp;：</span>
+            <input class="inputText" type="text" id="Consignee" value="@Model.Consignee"/>
+        </p>
+        <p>
+            <span class="mustInput">*</span>
+            <span>详细地址：</span>
+            <input class="inputText" type="text" id="ReceivingAddress" value="@Model.ReceiptAddress"/>
+        </p>
+        <p>
+            <span class="mustInput">*</span>
+            <span>手机号码：</span>
+            <input class="inputText" type="text" maxlength="11" onkeyup="value = value.replace(/[^\d]/g, '')" value="@Model.ContactInfo" id="ContactInfo" />
+        </p>
+        <p class="ifDefault">
+            <span class="mustInput">*</span>
+            <span>是否默认：</span>
+            <span class="onoffswitch">
+                <input type="checkbox" checked="" class="onoffswitch-checkbox" id="onoffswitch1">
+                <label for="onoffswitch1" class="onoffswitch-label">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </span>
+        </p>
+        <p>
+            <button id="saveAddressBut" class="saveAddressBut" onclick="SaveAddress(@Model.ReceivingInfoId); Colse()">保存收货人信息</button>
+        </p>
+    </div>
+</div>
+

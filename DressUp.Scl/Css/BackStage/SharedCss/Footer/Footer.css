@@ -1,0 +1,11 @@
+﻿.footer {
+    margin-top:30%;
+    margin-left:17%;
+    float:left;
+    width:83%;
+    background-color:gray;
+    color:white;
+    text-align:center;
+    line-height:40px;
+    font-size:0.8em
+}

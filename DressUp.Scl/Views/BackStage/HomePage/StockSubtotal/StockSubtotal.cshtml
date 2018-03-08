@@ -1,0 +1,26 @@
+﻿@model List<GoodsVM>
+<div class="outOfStock" id="OutOfStockWarning">
+    <div class="outOfStock-title">
+        <span>缺货小计</span>
+    </div>
+    <div class="outOfStock-Box">
+        <table cellpadding="65">
+            <tr>
+                <th>预警</th>
+                <th>商品名</th>
+                <th>库存</th>
+            </tr>
+            @for (int i = 1; i <= 10; i++)
+            {
+                <tr>
+                    <th>@i</th>
+                    <th title="@Model[i].GoodsName">@Model[i].GoodsName</th>
+                    <th>@Model[i].Stock</th>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="outOfStock-more">
+        <button onclick="FindMoreStock()">查看更多</button>
+    </div>
+</div>

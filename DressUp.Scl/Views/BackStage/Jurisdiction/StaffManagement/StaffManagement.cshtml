@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Shared/BcakStageFrame.cshtml";
+}
+
+@Styles.Render("~/Css/BackStage/JurisdictionCss/StaffManagement.css")
+@Styles.Render("~/Css/Pages/Pages.css")
+@Styles.Render("~/Content/zTreeStyle.css")
+@Styles.Render("~/Content/remodal.css")
+@Styles.Render("~/Content/remodal-default-theme.css")
+@Styles.Render("~/Css/GeneralLabel/Style.css")
+
+<div class="content">
+    <div class="titleBox">
+        <span class="title">员工管理</span>
+    </div>
+    <div>
+        <button data-remodal-target="addNewUser" class="addUserButton">添加员工</button>
+    </div>
+    @Html.Partial("~/Views/BackStage/Jurisdiction/StaffManagement/_UsersTable.cshtml")
+    @Html.Partial("~/Views/BackStage/Jurisdiction/StaffManagement/JurisdictionTree.cshtml")
+    @Html.Partial("~/Views/BackStage/Jurisdiction/StaffManagement/AddNewUser.cshtml")
+    @Html.Partial("~/Views/BackStage/Jurisdiction/StaffManagement/CheckRoles.cshtml")
+    @Html.Partial("~/Views/BackStage/Jurisdiction/StaffManagement/CheckSpecialPermissions.cshtml")
+    @Html.Partial("~/Views/BackStage/Jurisdiction/StaffManagement/ModifyUserPermissions.cshtml")
+</div>
+
+@section ScriptSection{
+    @Scripts.Render("~/Scripts/jquery.ztree.core-3.5.js")
+    @Scripts.Render("~/Scripts/jquery.ztree.excheck-3.5.js")
+    @Scripts.Render("~/Js/Pages/Pages.js")
+    @Scripts.Render("~/Js/BackStage/JurisdictionJs/StaffManagement.js")
+    @Scripts.Render("~/Scripts/remodal.js")
+}

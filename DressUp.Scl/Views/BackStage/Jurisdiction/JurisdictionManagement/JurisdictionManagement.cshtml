@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/BcakStageFrame.cshtml";
+}
+
+@Styles.Render("~/Css/BackStage/JurisdictionCss/JurisdictionManagement.css")
+@Styles.Render("~/Css/Pages/Pages.css")
+@Styles.Render("~/Content/zTreeStyle.css")
+@Styles.Render("~/Content/remodal.css")
+@Styles.Render("~/Content/remodal-default-theme.css")
+@Styles.Render("~/Css/GeneralLabel/Style.css")
+
+<div class="content">
+    <div class="titleBox">
+        <span class="title">权限管理</span>
+    </div>
+    <div>
+        <button onclick="AddNewRole()" data-remodal-target="addNewRole" class="addRoleButton">新增角色</button>
+    </div>
+    @Html.Partial("~/Views/BackStage/Jurisdiction/JurisdictionManagement/_RolesTable.cshtml")
+    @Html.Partial("~/Views/BackStage/Jurisdiction/JurisdictionManagement/JurisdictionTree.cshtml")
+    @Html.Partial("~/Views/BackStage/Jurisdiction/JurisdictionManagement/AddNewRole.cshtml")
+</div>
+
+@section ScriptSection{
+@Scripts.Render("~/Scripts/jquery.ztree.core-3.5.js")
+@Scripts.Render("~/Scripts/jquery.ztree.excheck-3.5.js")
+@Scripts.Render("~/Js/Pages/Pages.js")
+@Scripts.Render("~/Js/BackStage/JurisdictionJs/JurisdictionManagement.js")
+@Scripts.Render("~/Scripts/remodal.js")
+}

@@ -1,0 +1,50 @@
+﻿body {
+    font-family:微软雅黑;
+}
+.content {
+    float:left;
+    margin:6% 0 0 20%;
+}
+.titleBox {
+    font-size:1em;
+    width:1200%;
+    padding-bottom:2%;
+    border-bottom:1px solid black;
+}
+.title {
+    color:black;
+    font-size:20px;
+}
+.modify {
+    cursor:pointer;
+}
+.addNewRoleInputBox {
+    outline:0;
+    display:block;
+    border: 1px solid #C3CED9;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 14px;
+    height: 31px;
+    line-height: 31px;
+    margin-top:3%;
+    margin-left: 25%;
+    margin-bottom:5%;
+    padding: 0;
+    width: 50%;
+}
+.inputBox {
+    margin-top:3%;
+    margin-left:35%;
+}
+.addRoleButton {
+    margin-top:5%;
+    border-radius:10%;
+    padding:1%;
+    cursor:pointer;
+    color:white;
+    border:0;
+    background-color:grey
+}
+.addRoleButton:hover{
+    background-color:rgb(6,217,149)
+}

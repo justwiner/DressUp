@@ -1,0 +1,61 @@
+﻿@model ReceivingInfosVM
+@{ 
+    string consignee = "";
+    string receiptAddress = "";
+    string contactInfo = "";
+    int receivingInfoId = -1;
+    if (Model != null) {
+        consignee = Model.Consignee;
+        receiptAddress = Model.ReceiptAddress;
+        contactInfo = Model.ContactInfo;
+        receivingInfoId = Model.ReceivingInfoId;
+    }
+}
+<div class="ReceivingAddressBox">
+    <div class="ReceivingAddressTitle">收货地址（请填写并仔细核对以下信息）</div>
+    <div>
+        <div class="useNewAddressBox" onclick="ChangeStatus()">
+            <span class="useNewAddress">
+                <input type="checkbox" id="useNewAddress" />
+                <span>使用新地址</span>
+            </span>
+        </div>
+        <div class="inputNewAddressBox" id="inputNewAddressBox">
+            <p>
+                <span class="mustInput">*</span>
+                <span>收件人&nbsp;&nbsp;&nbsp;：</span>
+                <input type="text" id="newConsignee" onchange="CheckSaveButton()"/>
+            </p>
+            <p>
+                <span class="mustInput">*</span>
+                <span>详细地址：</span>
+                <input type="text"  id="newReceiptAddress" onchange="CheckSaveButton()"/>
+            </p>
+            <p>
+                <span class="mustInput">*</span>
+                <span>手机号码：</span>
+                <input type="text" maxlength="11" onkeyup="value = value.replace(/[^\d]/g, ''); " onchange="CheckSaveButton()" id="newContactInfo"/>
+            </p>
+            <p>
+                <button id="saveAddressBut" class="saveAddressBut" onclick="SaveNewAddress()" disabled="disabled">保存收货人信息</button>
+                <button class="cancelSaveBut" onclick="CloseInputAddressBox()">取消</button>
+            </p>
+        </div>
+    </div>
+    <div class="defaultAddress">
+        <input value="@receivingInfoId" type="text" style="display:none" id="receivingInfoId"/>
+        <span class="defaultAddressInfo" id="consignee">@consignee</span>
+        <span class="defaultAddressInfo" id="receiptAddress">@receiptAddress</span>
+        <span class="defaultAddressInfoEnd" id="contactInfo">@contactInfo</span>
+        <span class="defaultAddressChange" onclick="ShowOtherAddress()">选择其他地址</span>
+    </div>
+</div>
+<div class="buyerAddresses" id="buyerAddresses">
+    <div class="buyerAddressesBox" id="buyerAddressesBox">
+        
+    </div>
+    <div>
+        <button class="layui-btn layui-btn-normal" id="changeReceivingBut" onclick="Close();ChangeOtherAddress()">确定</button>
+        <button class="layui-btn layui-btn-danger" onclick="Close()">取消</button>
+    </div>
+</div>

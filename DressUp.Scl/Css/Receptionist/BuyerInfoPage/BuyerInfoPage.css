@@ -1,0 +1,62 @@
+﻿body {
+    margin:0;
+    font-family:微软雅黑;
+    text-align:center;
+}
+.buyerInfoWrapper {
+    margin:2% 0;
+    padding:10% 18%;
+    background-color:white;
+    box-shadow:3px 3px 20px #ccc;
+}
+.buyerInfoContentTitle {
+    text-align:left;
+    padding-bottom:0.3%;
+    border-bottom:1px solid lightgrey;
+}
+.buyerInfoContentTitle span{
+    font-size:0.7em;
+}
+.buyerInfoMenuBox {
+    text-align:left;
+    margin-top:2%;
+}
+.buyerInfoMenuBoxRight, .buyerInfoMenuBoxLeft {
+    vertical-align:top;
+    display:inline-block;
+}
+.buyerInfoMenuBoxLeft {
+    width:18%;
+    border:1px solid lightgrey;
+    padding:1%;
+}
+.buyerInfoMenus {
+    padding:5% 0 15% 0;
+    border-top: 1px solid lightgrey;
+}
+.buyerInfoMenuBoxTitle span {
+    display:block;
+    font-weight:600;
+}
+.buyerInfoMenus span {
+    display: block;
+    font-size: 0.5em;
+    margin-top:15%;
+}
+.buyerInfoMenuBoxTitle p {
+    font-size:0.5em;
+}
+.menuName i {
+    float: right;
+    color: red;
+}
+.pointer {
+    cursor:pointer;
+}
+._now {
+    color:grey;
+}
+.buyerInfoMenuBoxRight {
+    padding-left:1%;
+    width:78%;
+}

@@ -1,0 +1,55 @@
+﻿.addReceivingBox {
+    display:none;
+}
+.addReceivingBox,.editReceivingBox {
+    text-align:center;
+    padding:2%;
+}
+.mustInput {
+    color:red;
+}
+.inputNewAddressBox p {
+    margin-top:3%;
+}
+
+.inputNewAddressBox p span {
+    font-size:0.5em;
+    vertical-align:middle;
+}
+.ifDefault {
+    margin-right:13%;
+}
+.inputText{
+    display: inline-block; 
+    height: 34px; 
+    padding: 6px 12px; 
+    font-size: 14px; 
+    line-height: 1.428571429; 
+    color: #555555; 
+    vertical-align: middle; 
+    background-color: #ffffff; 
+    border: 1px solid #cccccc; 
+    border-radius: 4px; 
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); 
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; 
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; 
+}
+.inputText:focus ,.inputNewAddressBox input:focus{ 
+    border-color: #66afe9; 
+    outline: 0; 
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6); 
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6); 
+}
+.saveAddressBut{
+    margin-bottom:2%;
+    padding:2% 0;
+    width:40%;
+    cursor: pointer;
+    color:white;
+    font-size:0.7em;
+}
+.saveAddressBut {
+    background-color:#D34A2D;
+    border:1px solid #D34A2D;
+}

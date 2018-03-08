@@ -1,0 +1,20 @@
+﻿<div class="goodsShowBox">
+    <div class="goods">
+        @foreach (Goods item in Model)
+        {
+            <a class="pointer" target="_blank" href="/ShowGoods/GoodsDetails?goodsId=@item.GoodsId">
+                <div class="goodsBox" title="@item.GoodsName">
+                    <img src="@item.GoodsSimpleGraph" class="goodsImg">
+                    <p class="goodsName">@item.GoodsName</p>
+                    <p class="goodsPrice">￥&nbsp;@item.Price</p>
+                </div>
+            </a>
+        }
+    </div>
+    <div class="goodsBox_findmore">
+        <a href="/ShowGoods/SetGoodsPageListById?typeId=@Model[0].ClassificationId" target="_Blank">
+            <p class="fa fa-chevron-circle-down findMoreIcon"></p>
+            <p class="findMoreText">查看更多</p>
+        </a>
+    </div>
+</div>

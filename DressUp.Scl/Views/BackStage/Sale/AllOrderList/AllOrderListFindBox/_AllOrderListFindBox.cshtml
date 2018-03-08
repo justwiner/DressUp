@@ -1,0 +1,19 @@
+﻿<div class="findBox-title">
+    <span class="title">订单状态</span>
+    <a name="orderStatus" id="0" href="#" onclick="ChangeColor('orderStatus', this); AllOrderFindByStatus(this); AllOrderGetPageNum()">所有</a>
+    <a name="orderStatus" id="1" href="#" onclick="ChangeColor('orderStatus', this); AllOrderFindByStatus(this); AllOrderGetPageNum()">已发货</a>
+    <a name="orderStatus" id="2" href="#" onclick="ChangeColor('orderStatus', this); AllOrderFindByStatus(this); AllOrderGetPageNum()">已支付</a>
+    <a name="orderStatus" id="3" href="#" onclick="ChangeColor('orderStatus', this); AllOrderFindByStatus(this); AllOrderGetPageNum()">待发货</a>
+    <a name="orderStatus" id="4" href="#" onclick="ChangeColor('orderStatus', this); AllOrderFindByStatus(this); AllOrderGetPageNum()">已退款</a>
+    <a name="orderStatus" id="5" href="#" onclick="ChangeColor('orderStatus', this); AllOrderFindByStatus(this); AllOrderGetPageNum()">已完成</a>
+    <a name="orderStatus" id="6" href="#" onclick="ChangeColor('orderStatus', this); AllOrderFindByStatus(this); AllOrderGetPageNum()">已失效</a>
+</div>
+<div class="findBox-title">
+    <span class="title">订单查询</span>
+    <a>时间:</a>
+    <a>开始:</a>
+    <input type="date" id="OrderMinTime"/>
+    <a>-----结束:</a>
+    <input type="date" id="OrderMaxTime" />
+    <button onclick="AllOrderFindByTime(); AllOrderGetPageNum()">确定</button>
+</div>

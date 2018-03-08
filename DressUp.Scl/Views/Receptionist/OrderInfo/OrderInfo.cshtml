@@ -1,0 +1,45 @@
+﻿@model List<SimpleOrdersSVM>
+@{
+    decimal? totalMoney = 0;
+    foreach (SimpleOrdersSVM item in Model)
+    {
+        totalMoney += item.GoodsTotalPrice;
+    }
+}
+<div class="orderInfoBox">
+    <table class="orderInfoBoxTable">
+        <tr class="tableTitle">
+            <th>商品图</th>
+            <th>商品信息</th>
+            <th>售价</th>
+            <th>数量</th>
+            <th>小计</th>
+            <th>商品总价</th>
+        </tr>
+        @foreach (SimpleOrdersSVM item in Model)
+        {
+            <tr class="tableGoodsInfo" name="goodsId" id="@item.GoodsId">
+                <th class="orderGoodsImg"><img src="@item.GoodsImg" /></th>
+                <th class="orderGoodsName">@item.GoodsName</th>
+                <th class="importantText">¥ @item.GoodsPrice</th>
+                <th name="shopCartsId" style="display:none" id="@item.ShopCartsId"></th>
+                <th name="goodsNum" id="@item.GoodsNum">@item.GoodsNum</th>
+                <th class="nextShowBorder">¥@item.GoodsPrice</th>
+                <th class="importantText totalMoney">¥@item.GoodsTotalPrice</th>
+            </tr>
+        }
+    </table>
+    <div class="showOrdersBox">
+        <p>
+            <span class="payItem">商品总价：RMB ¥</span>
+            <span class="importantText">@totalMoney</span>
+        </p>
+        <p>
+            <span class="payItem">您需要实际支付金额：</span>
+            <span class="importantText">¥@totalMoney</span>
+        </p>
+        <p>
+            <button id="payment" onclick="Payment()">支付订单></button>
+        </p>
+    </div>
+</div>

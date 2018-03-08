@@ -1,0 +1,16 @@
+﻿.newGoodsStorage_title span{
+    margin-right:6.5%;
+}
+.newGoodsStorage_title {
+    margin-bottom:1%;
+}
+.store_Storage p {
+    color:red;
+    font-size:20px;
+}
+.newGoodsStorage_input input {
+    width:10%;
+}
+.newGoodsStorage_input button {
+    margin-left:1%;
+}

@@ -1,0 +1,11 @@
+﻿body {
+    margin:0;
+    background: #f2f4f8;
+}
+.wrapper {
+    margin:0 auto 0 auto;
+}
+a {
+    text-decoration:none;
+    color:black;
+}

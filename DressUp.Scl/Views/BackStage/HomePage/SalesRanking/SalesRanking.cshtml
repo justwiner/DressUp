@@ -1,0 +1,35 @@
+﻿@*@using DressUp_Scl_Data.Data
+<div class="salesRanking" id="SalesStatistics" name="SalesStatistics">
+    <div class="salesRanking-title">
+        <span>销量排行</span>
+    </div>
+    <div class="salesRanking-Box">
+        <table cellpadding="40">
+            <tr>
+                <th>排名</th>
+                <th>商品名</th>
+                <th>价格</th>
+                <th>销量</th>
+            </tr>
+            @for (int i = 1; i <= 10; i ++)
+            {
+                <tr>
+                    <th>@i</th>
+                    <th title="@Model[i].GoodsName">@Model[i].GoodsName</th>
+                    @if (Model[i].IfHot == true)
+                    {
+                        <th>@Model[i].PromotionPrice</th>
+                    }
+                    else
+                    {
+                        <th>@Model[i].Price</th>
+                    }
+                    <th>@Model[i].GoodsSaleNum</th>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="salesRanking-more">
+        <button>查看更多</button>
+    </div>
+</div>*@

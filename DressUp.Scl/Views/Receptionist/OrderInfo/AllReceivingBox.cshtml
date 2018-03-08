@@ -1,0 +1,6 @@
+﻿@model List<ReceivingInfosVM>
+
+@foreach (ReceivingInfosVM item in Model)
+{
+    <label><input type="checkbox" name="checkBox" id="@item.ReceivingInfoId" onclick="ChangeCheckBox(this)"><i>✓</i>@item.Consignee&nbsp;/&nbsp;@item.ReceiptAddress&nbsp;/&nbsp;@item.ContactInfo</label>
+}

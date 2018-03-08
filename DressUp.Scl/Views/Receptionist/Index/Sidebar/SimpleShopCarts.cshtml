@@ -1,0 +1,31 @@
+﻿<form method="post" action="/ShowGoods/OrdersInfo" onsubmit="return CheckBuyerAndShopCarts()">
+    <div class="sidebarShopCarts" id="sidebarShopCarts">
+        <div class="sidebarShopCarts_Head">
+            <input type="checkbox" name="" id="chooseAll" onchange="ChooseAll()" />
+            <span>全选</span>
+        </div>
+        <div class="sidebarShopCarts_Center" id="sidebarShopCarts_Center">
+        
+        </div>
+        <div class="sidebarShopCarts_Bottom">
+            <div class="chooseInfoBox">
+                <div>
+                    <span>已选：</span>
+                    <span id="chooseNum" class="showText">0</span>
+                    <span>件</span>
+                </div>
+                <div>
+                    <span>商品总价：</span>
+                    <span class="showText">￥<span id="totalMoney" name="totalMoney">0.00</span></span>
+                    <span>元</span>
+                </div>
+            </div>
+            <div class="buyBut">
+                <button type="submit">
+                    <span>我要买</span>
+                    <span class="icon-chevron-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,94 @@
+﻿.buyerInfoLoading {
+    font-size:2em;
+    margin:10% 0 0 50%;
+}
+ul {
+    padding:0;
+}
+li {
+    list-style:none;
+}
+.helloBuyer {
+    background-color:#fafafa;
+    padding:0.5% 2%;
+}
+.helloBuyer span {
+    font-size:0.5em;
+    color:#666
+}
+.accountInfo {
+    padding:0 2%;
+    margin-top:2%;
+    font-size: 0.5em;
+    border: 1px solid lightgrey;
+}
+.accountInfo ul li{
+    padding:1% 0;
+}
+.dividingLine {
+    padding-bottom: 1%;
+    border-bottom: 1px solid lightgrey;
+}
+.inlineRight {
+    text-align: right;
+    width: 80%;
+    float: right;
+    display: inline-block
+}
+.importantText {
+    color:red;
+}
+.nearlyOrder {
+    margin-top:3%;
+}
+.nearlyOrder span{
+    font-size:0.8em;
+    color:grey;
+    font-weight:600;
+    background-color:#fafafa
+}
+.nearlyOrder table{
+    border-collapse:collapse;
+    font-family:微软雅黑;
+    text-align:center;
+    font-size: 0.2em;
+    color:grey;
+    border: 1px solid lightgrey;
+    width:100%;
+}
+.nearlyOrder table td{
+    font-weight:100;
+}
+.nearlyOrderTitleBox {
+    background-color: #fafafa;
+    height:30px;
+}
+.orderImgBox img {
+    border: 1px solid lightgrey;
+    width: 35%;
+}
+.orderImgBox {
+    width:20%;
+}
+.nearlyOrderInfoBox td {
+    padding: 2% 0;
+    border: 1px solid lightgrey;
+}
+.orderId {
+    width:25%;
+}
+.nearlyOrderTitle {
+    padding: 1% 2% 0 2%;
+    width: 10%;
+    background-color: #fafafa;
+    border: 1px solid lightgrey;
+    border-bottom: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 15px;
+}
+.buyerInfoMenuBoxTitle {
+    margin-bottom:5%;
+}
+.buyerInfoMenuBoxTitle span{
+    margin-bottom:3%;
+}

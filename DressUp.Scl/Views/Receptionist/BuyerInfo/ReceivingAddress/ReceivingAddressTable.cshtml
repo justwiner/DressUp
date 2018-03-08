@@ -1,0 +1,17 @@
+﻿@model List<ReceivingInfosVM>
+@if (Model != null)
+{
+    foreach (ReceivingInfosVM item in Model)
+    {
+        <tr class="receivingAddressInfo">
+            <td class="receivingAddress">@item.ReceiptAddress</td>
+            <td>@item.Consignee</td>
+            <td>@item.ContactInfo</td>
+            <td>@item.IsDefault</td>
+            <td>
+                <i class="icon-edit pointer edit" id="editReceivingInfo" onclick="ShowEditReceivingInfo('@item.ReceivingInfoId')"></i>
+                <i class="icon-remove pointer remove" id="deleteReceivingInfo" onclick="DeleteReceivingInfo('@item.ReceivingInfoId')"></i>
+            </td>
+        </tr>
+    }
+}

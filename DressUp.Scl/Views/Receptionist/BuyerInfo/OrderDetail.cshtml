@@ -1,0 +1,38 @@
+﻿@model OrdersSVM
+<div class="orderDetailBox">
+    <div class="orderDetailBoxHead">
+        <span>订单编号：@Model.OrderNum</span>
+        <span>成交时间：@Model.OrderGenerationTime</span>
+    </div>
+    <div class="orderStatusBox">
+        <p>订单当前状态：<span class="orderStatus">@Model.OrderStatus</span></p>
+    </div>
+    <div class="orderSimpleBox">
+        <div>
+            <img src="@Model.GoodsImg" />
+        </div>
+        <div>
+            <p class="orderDetailBoxGoodsName">商品名：@Model.GoodsName</p>
+            <p>单价：<span class="highlight">￥@Model.GoodsPrice</span></p>
+            <p>数量：@Model.GoodsNum</p>
+            <p>总价：<span class="highlight">￥@(Model.GoodsNum*Model.GoodsPrice)</span></p>
+        </div>
+    </div>
+    <div class="paymentInfo">
+        <p>总应付款：￥@(Model.GoodsNum*Model.GoodsPrice)</p>
+        <p>实付款：￥@(Model.GoodsNum*Model.GoodsPrice)</p>
+    </div>
+    <div class="DeliveryAndLogistics">
+        <div class="DeliveryAndLogisticsTitle">发货信息</div>
+        <div class="DeliveryAndLogisticsInfo">
+            <span>联系人：@Model.Consignee</span>
+            <span>收货地址：@Model.ReceiptAddress</span>
+            <span>联系方式：@Model.ContactInfo</span>
+        </div>
+    </div>
+    <div class="backbuttonBox">
+        <div class="backbutton">
+            <a onclick="Colse()">返 回</a>
+        </div>
+    </div>
+</div>

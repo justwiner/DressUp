@@ -1,0 +1,24 @@
+﻿@using DressUp_Scl_Data.Data
+@{
+    Layout = "~/Views/Shared/BcakStageFrame.cshtml";
+    Users user = System.Web.HttpContext.Current.Session["User"] as Users;
+}
+
+<div class="contents">
+    <div>
+        <div>
+            <span class="userinfo">
+                <span class="userinfo_">账号信息</span>
+                <span class="fa fa-users"></span>
+            </span>
+        </div>
+        <div class="user_box">
+            <p>用户名: @user.Name</p>
+            <p>账号: @user.Account</p>
+            <p>用户编号: @user.UserId</p>
+            <p>联系方式: @user.ContactInfo</p>
+        </div>
+    </div>
+</div>
+
+

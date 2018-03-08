@@ -1,0 +1,20 @@
+﻿<div class="sidebar">
+    <ul>
+        <li title="个人中心">
+            <a onclick="BuyerInfo()" class="fa fa-user sidebar_icon pointer"></a>
+        </li>
+        <li title="购物车" id="endPoint">
+            <a class="pointer" onclick="ChangeSimpleShopCarts()">
+                <span class="fa fa-shopping-cart sidebar_icon"></span>
+                <span class="sidebarFont">购</span>
+                <span class="sidebarFont">物</span>
+                <span class="sidebarFont">车</span>
+                <span class="sidebarFont shopCartsNum" id="sidebar_shopCartsNum">@Model</span>
+            </a>
+        </li>
+        <li title="回到顶部">
+            <a href="#" class="fa fa-angle-up sidebar_icon"></a>
+        </li>
+    </ul>
+</div>
+@Html.Partial("~/Views/Receptionist/Index/Sidebar/SimpleShopCarts.cshtml")

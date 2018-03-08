@@ -1,0 +1,80 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>装扮家--账号注册</title>
+    <link href="~/Content/zeroModal.css" rel="stylesheet" />
+    <link href="~/Css/Receptionist/Register/Register.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="logoBox">
+        <img onclick="GotoHomePage()" src="~/Picture/Logo.png" class="logo"/>
+    </div>
+    <div class="inputBox">
+        <div  class="inputBoxTitle">
+            <span>用户注册</span>
+        </div>
+        <div class="inputInfo">
+            <div class="inputText divBox">
+                <span>昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称</span>
+                <input type="text" id="buyerNickname" placeholder="您的昵称" maxlength="7"
+                       onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" onblur="CheckNickname()" autocomplete="new-password"/>
+            </div>
+            <p class="tip">
+                <i class="icon-lightbulb"></i>&nbsp;&nbsp;&nbsp;&nbsp;昵称只允许输入中文、英文、数字，且最长为7位。
+            </p>
+            <div class="inputText divBox">
+                <span>用&nbsp;&nbsp;&nbsp;户&nbsp;&nbsp;&nbsp;名</span>
+                <input type="text" id="buyerName" onchange = "ReflushButton()" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" placeholder="您的账户和登录名" autocomplete="new-password"/>
+                <a id="nameIfExistTip" class="nameIfExist" onclick="NameIfExist()">检测此用户名</a>
+            </div>
+            <p class="tip">
+                <i class="icon-lightbulb"></i>&nbsp;&nbsp;&nbsp;&nbsp;用户名只允许输入中文、英文、数字。
+            </p>
+            <p class="erroTip" id="erroTipName">
+                <i class="icon-warning-sign important"></i>请选择其他用户名
+            </p>
+            <p class="erroTip allowUse" id="allowTipName">
+                <i class="icon-ok"></i>此用户名可用
+            </p>
+            <div class="inputText divBox">
+                <span>设&nbsp;置&nbsp;密&nbsp;码</span>
+                <input type="password" id="password" placeholder="请设置密码" onkeyup="CheckPassword()" autocomplete="new-password"/>
+            </div>
+            <p class="erroTip" id="erroTipPassWord">
+                <i class="icon-warning-sign important"></i>建议使用字母、数字和符号两种及以上的组合，6-20个字符
+            </p>
+            <div class="inputText divBox">
+                <span>确&nbsp;认&nbsp;密&nbsp;码</span>
+                <input type="password" id="rePassword" placeholder="再次输入密码" onkeyup="CheckRePassword()" autocomplete="new-password"/>
+            </div>
+            <p class="erroTip" id="erroTipRePassWord">
+                <i class="icon-warning-sign important"></i>好像两次输入的密码不一样......
+            </p>
+            <div class="inputCode divBox">
+                <span>验&nbsp;&nbsp;&nbsp;证&nbsp;&nbsp;&nbsp;码</span>
+                <input id="inputCode" type="text" placeholder="请输入验证码"  autocomplete="new-password"/>
+                <span id="code" class="mycode"></span>
+            </div>
+            <p class="erroTip" id="erroTipCode">
+                <i class="icon-warning-sign important"></i>(⊙o⊙)…验证码是不是输错了哟~
+            </p>
+            <button id="submitBut" onclick="RegisterNewBuer()" disabled="disabled">立即注册</button>
+        </div>
+    </div>
+    <div class="tail">
+        <div class="tailBox">
+            <span>
+                Copyright © 2016 - 2017 装扮家 版权所有
+            </span>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/zeroModal.js"></script>
+    <script src="~/Scripts/js.KinerCode.js"></script>
+    <script src="~/Js/Receptionist/SharedJs/Register.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Views/Shared/ReceptionistFrame.cshtml";
+    ViewBag.Title = "装扮家首页";
+}
+
+@Styles.Render("~/Css/Receptionist/HomePageCss/Carousel.css")
+@Styles.Render("~/Css/Receptionist/HomePageCss/GoodsTypes.css")
+@Styles.Render("~/Css/Receptionist/HomePageCss/GoodsBox1.css")
+@Styles.Render("~/Css/Receptionist/HomePageCss/GoodsBox2.css")
+
+@Html.Partial("~/Views/Receptionist/HomePage/Carousel/_Carousel.cshtml")
+@Html.Partial("~/Views/Receptionist/HomePage/GoodsTypes/_GoodsTypes.cshtml")
+@Html.Partial("~/Views/Receptionist/HomePage/HotGoodsBox/_HotGoodsBox.cshtml")
+<div>
+    <a href="/ShowGoods/SetGoodsPageListById?typeId=10" target="_Blank"><img src="~/Picture/FrontPic/HomePage/美味餐厨.jpg" /></a>
+</div>
+@Html.Partial("~/Views/Receptionist/HomePage/CookGoods/_CookGoods.cshtml")
+<div>
+    <a href="/ShowGoods/SetGoodsPageListById?typeId=12" target="_Blank"><img src="~/Picture/FrontPic/HomePage/家纺布艺.jpg" /></a>
+</div>
+@Html.Partial("~/Views/Receptionist/HomePage/HomeAndClothArt/_HomeAndClothArt.cshtml")
+<div>
+    <a href="/ShowGoods/SetGoodsPageListById?typeId=9" target="_Blank"><img src="~/Picture/FrontPic/HomePage/收纳.jpg" /></a>
+</div>
+@Html.Partial("~/Views/Receptionist/HomePage/StorageBox/_StorageBox.cshtml")
+<div>
+    <a href="/ShowGoods/SetGoodsPageListById?typeId=7" target="_Blank"><img src="~/Picture/FrontPic/HomePage/卫浴.jpg" /></a>
+</div>
+@Html.Partial("~/Views/Receptionist/HomePage/Bathroom/_Bathroom.cshtml")
+<div>
+    <a href="/ShowGoods/SetGoodsPageListById?typeId=11" target="_Blank"><img src="~/Picture/FrontPic/HomePage/居家饰物.jpg" /></a>
+</div>
+@Html.Partial("~/Views/Receptionist/HomePage/HomeAccessories/_HomeAccessories.cshtml")
+<div>
+    <a href="/ShowGoods/SetGoodsPageListById?typeId=20" target="_Blank"><img src="~/Picture/FrontPic/HomePage/客厅.jpg" /></a>
+</div>
+@Html.Partial("~/Views/Receptionist/HomePage/LivingRoom/_LivingRoom.cshtml")
+<div>
+    <a href="/ShowGoods/SetGoodsPageListById?typeId=19" target="_Blank"><img src="~/Picture/FrontPic/HomePage/卧房.jpg" /></a>
+</div>
+@Html.Partial("~/Views/Receptionist/HomePage/Bedroom/_Bedroom.cshtml")
+<div>
+    <a href="/ShowGoods/SetGoodsPageListById?typeId=22" target="_Blank"><img src="~/Picture/FrontPic/HomePage/原创.jpg" /></a>
+</div>
+@Html.Partial("~/Views/Receptionist/HomePage/Original/_Original.cshtml")
+<div>
+    <a href="/ShowGoods/SetGoodsPageListById?typeId=21" target="_Blank"><img src="~/Picture/FrontPic/HomePage/北欧.jpg" /></a>
+</div>
+@Html.Partial("~/Views/Receptionist/HomePage/NorthernEurope/_NorthernEurope.cshtml")
+
+
+@Scripts.Render("~/Scripts/jquery-1.9.1.min.js")
+@Scripts.Render("~/Scripts/responsiveslides.min.js")
+@Scripts.Render("~/Js/Receptionist/HomePageJs/Carousel.js")

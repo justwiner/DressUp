@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Shared/ReceptionistFrame.cshtml";
+    ViewBag.Title = TempData["TypeName"] + "" + TempData["TypeEnglishName"] + "- 装扮家";
+}
+
+@Styles.Render("~/Css/Receptionist/Category/Style.css")
+@Styles.Render("~/Css/Receptionist/HomePageCss/GoodsBox2.css")
+@Styles.Render("~/Css/Receptionist/HomePageCss/GoodsBox1.css")
+<div class="categoryContent">
+    <div class="categoryTitle">
+        <span class="categoryTitleChinese">@TempData["TypeName"]</span>
+        <span class="categoryTitleEnglish">@TempData["TypeEnglishName"]</span>
+    </div>
+    <div class="goodsShowBox" id="goodsShowBox">
+        @Html.Action("ShowCategory", "ShowGoods")
+    </div>
+    <span id="loadIcon" style="display:none"><i class="icon-spinner icon-spin"></i>Loading........</span>
+    <div class="allGoodsShow" id="allGoodsShow">所有商品加载完了(⊙o⊙)…</div>
+    <div class="categoryButtom"></div>
+</div>
+@section ScriptSection{
+<script src="~/Js/Pages/LoadMore.js"></script>
+<script src="~/Js/Receptionist/Category/Category.js"></script>
+}

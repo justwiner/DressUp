@@ -1,0 +1,65 @@
+﻿
+
+.buyerOrdersSimpleInfo {
+    background-color: #FFFCEB;
+    border: 1px solid #FFCC99;
+    padding:1% 1.5%;
+}
+.buyerOrdersSimpleInfo span{
+    font-size:0.7em;
+}
+.orderItem {
+    margin-right:2%;
+}
+.orderTitle {
+    float:right;
+    font-weight:600
+}
+.buyerOrdersDetailBox {
+    margin-top:3%;
+    font-size:0.7em;
+}
+.buyerOrdersDetailBox table{
+    border:1px solid #FFCC99;
+    text-align:center;
+    border-collapse:collapse;
+    width:100%;
+    word-wrap: break-word; 
+    word-break: break-all;
+}
+.OrdersDetailTitle {
+    background-color: #FFFCEB;
+}
+.OrdersDetailTitle td{
+    padding:1%;
+    border-bottom: 1px solid #FFCC99;
+    border-top: 1px solid #FFCC99;
+}
+.OrdersDetailInfo {
+    border-bottom: 1px solid #FFCC99;
+}
+.OrdersDetailInfo td{
+    padding:2%;
+}
+.imgBox {
+    width:10%;
+}
+.imgBox img {
+    width: 100%;
+    border:1px solid lightgrey;
+}
+.maxLength {
+    width: 15%;
+}
+.delOrder:hover {
+    color:red;
+}
+.hoverImportant:hover {
+    color:red;
+}
+.OrdersDetailInfo button {
+    padding:8% 15%;
+    border:0;
+    background-color:#d34a2d;
+    color:white;
+}

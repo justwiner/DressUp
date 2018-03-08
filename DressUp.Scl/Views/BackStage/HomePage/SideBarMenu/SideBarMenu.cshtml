@@ -1,0 +1,29 @@
+﻿@model List<MenusSVM>
+<nav id="ml-menu" class="menu">
+    <div class="menu__wrap">
+        <ul data-menu="main" class="menu__level">
+            @foreach (MenusSVM item in Model)
+            {
+                if (!item.IfHasFather(Model))
+                {
+                    if (item.IfHasChildren())
+                    {
+                        <li class="menu__item"><span class="fa @item.Icon" style="margin-right:5%;width:18px"></span><a class="menu__link" data-submenu="submenu-@item.Id" href="@item.Url">@item.Name</a></li>
+                    }
+                    else
+                    {
+                        <li class="menu__item"><span class="fa @item.Icon" style="margin-right:5%;width:18px"></span><a class="menu__link" href="@item.Url">@item.Name</a></li>
+                    }
+                }
+            }
+        </ul>
+        @foreach (MenusSVM item in Model)
+        {
+            if (item.IfHasChildren())
+            {
+                @Html.Partial("~/Views/BackStage/HomePage/SideBarMenu/SubMenu.cshtml", item.GetChildren(Model))
+            }
+        }
+    </div>
+</nav>
+

@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "~/Views/Shared/ReceptionistFrame.cshtml";
+    ViewBag.Title = "用户管理中心";
+}
+@section Css{
+<link href="~/Content/layer.css" rel="stylesheet" />
+<link href="~/Content/layui.css" rel="stylesheet" />
+<link href="~/Content/zeroModal.css" rel="stylesheet" />
+<link href="~/Content/jquery.page.css" rel="stylesheet" />
+<link href="~/Content/dropkick.css" rel="stylesheet" />
+<link href="~/Content/example.css" rel="stylesheet" />
+<link href="~/Content/jquery.onoff.css" rel="stylesheet" />
+<link href="~/Css/Receptionist/BuyerInfoPage/AddReceivingBox.css" rel="stylesheet" />
+<link href="~/Css/Receptionist/BuyerInfoPage/BuyerChangePassword.css" rel="stylesheet" />
+<link href="~/Css/Receptionist/BuyerInfoPage/BuyerInfoBox.css" rel="stylesheet" />
+<link href="~/Css/Receptionist/BuyerInfoPage/BuyerInfoHomePage.css" rel="stylesheet" />
+<link href="~/Css/Receptionist/BuyerInfoPage/BuyerInfoPage.css" rel="stylesheet" />
+<link href="~/Css/Receptionist/BuyerInfoPage/BuyerOrders.css" rel="stylesheet" />
+<link href="~/Css/Receptionist/BuyerInfoPage/BuyerReceivingAddress.css" rel="stylesheet" />
+<link href="~/Css/Receptionist/BuyerInfoPage/OrderDetailBox.css" rel="stylesheet" />
+}
+
+<div class="buyerInfoContent">
+    <div class="buyerInfoWrapper">
+        <div class="buyerInfoContentTitle">
+            <span class="_now">您当前的位置 ></span>
+            <span id="nowPosition">首页</span>
+        </div>
+        <div class="buyerInfoMenuBox">
+            <div class="buyerInfoMenuBoxLeft">
+                <div class="buyerInfoMenuBoxTitle">
+                    <span>用户中心</span>
+                    <span>USER CENTER</span>
+                    <p class="menuName pointer" name="menuName" id="首页" onclick="EnterThisMenu(this); BuyerInfoHomePage()">首页<i class="icon-angle-right"></i></p>
+                </div>
+                <div class="buyerInfoMenus">
+                    <span class="menuName pointer" name="menuName" id="我的订单" onclick="EnterThisMenu(this); BuyerInfoOrders(1)">我的订单</span>
+                </div>
+                <div class="buyerInfoMenus">
+                    <span class="menuName pointer" name="menuName" id="个人信息" onclick="EnterThisMenu(this); BuyerInfoPage()">个人信息</span>
+                    <span class="menuName pointer" name="menuName" id="收货地址" onclick="EnterThisMenu(this); BuyerInfoReceivingAddress()">收货地址</span>
+                    <span class="menuName pointer" name="menuName" id="修改密码" onclick="EnterThisMenu(this); BuyerInfoChangePassword()">修改密码</span>
+                </div>
+            </div>
+            <div class="buyerInfoMenuBoxRight" id="buyerInfoMenuBoxRight">
+                @Html.Action("GetUserInfo", "User")
+            </div>
+        </div>
+    </div>
+</div>
+@section ScriptSection{
+<script src="~/Scripts/jquery.onoff.js"></script>
+<script src="~/Scripts/layer.js"></script>
+<script src="~/Scripts/zeroModal.js"></script>
+<script src="~/Scripts/jquery.dropkick-min.js"></script>
+<script src="~/Scripts/jquery.page.js"></script>
+<script src="~/Js/Receptionist/BuyerInfoPage/BuyerInfoPage.js"></script>
+}
+

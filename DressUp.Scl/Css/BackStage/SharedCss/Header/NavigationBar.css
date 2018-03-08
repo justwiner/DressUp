@@ -1,0 +1,55 @@
+﻿.main-header {
+    background-color:rgb(6,217,149);
+    padding:1% 0 1% 0;
+    border-bottom:1px solid lightgrey;
+    position:fixed;
+    width:100%;
+    z-index:1;
+}
+.main-header-title, .main-header-user-Name, .main-header-icon, .fa-envelope {
+    color:white;
+}
+.main-header-title, .main-header-user-Name {
+    font-family:微软雅黑;
+}
+.main-header-user-Name {
+    font-size:10px;
+}
+.main-header-title {
+    font-size:1.5em;
+    margin:0 6%;
+}
+.main-header-icon {
+    font-size:1.2em;
+}
+.main-header .fa-envelope {
+    margin-left:65%;
+    margin-right:5%;
+}
+.main-header-news {
+    width:40%;
+    border-radius:50%;
+    background-color:red;
+    color:white;
+    font-size:10px;
+    display:inline-block;
+    margin-left:-30%;
+    text-align:center;
+}
+li {
+    list-style:none;
+}
+.main-header ul {
+    width:12%;
+    display:none;
+    margin:1% 0 0 89%;
+    position:absolute;
+    background-color:rgb(6,217,149);
+    border-bottom-left-radius:10%;
+}
+.main-header ul li a i{
+    margin:10% 10% 10% -5%;
+}
+.main-header ul li a{
+    color:white;
+}

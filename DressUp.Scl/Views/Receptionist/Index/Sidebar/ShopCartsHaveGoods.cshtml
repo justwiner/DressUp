@@ -1,0 +1,21 @@
+﻿@model List<ShopCartsSVM>
+<div class="hasGoods">
+    @foreach(ShopCartsSVM item in Model)
+    {
+        <div class="shopCartGoods">
+            <input type="text" style="display:none" name="conciseOrders[@item.SerialNumber].GoodsId" value="@item.GoodsId"/>
+            <input type="text" style="display:none" name="conciseOrders[@item.SerialNumber].GoodsNum" value="@item.GoodsNum" />
+            <input type="text" style="display:none" name="conciseOrders[@item.SerialNumber].IfChecked" value="false" id="_@item.ShoppingCartId"/>
+            <input type="text" style="display:none" name="conciseOrders[@item.SerialNumber].ShopCartsId" value="@item.ShoppingCartId"/>
+            <input type="checkbox" name="checkBox" onchange="ChooseOne(this, @item.GoodsNum, @item.Price)" id="@item.ShoppingCartId" class="shopCartGoodsCheckBox"/>
+            <img src="@item.GoodsSimpleGraph" />
+            <div class="goodsInfoBox">
+                <span class="shopCartGoodsName">@item.GoodsName</span>
+                <span class="shopCartsGoodsPrice">单价：￥<a name="goodsMoney" class="showText">@item.Price</a></span>
+                <span>数量：<a name="shopCartsNum">@item.GoodsNum</a></span>
+                <span class="shopCartsGoodsPrice">总价：￥<a name="goodsTotalMoney" class="showText">@item.TotalPrice</a></span>
+                <span class="icon-trash" onclick="DeleteShopCartsGoods(@item.ShoppingCartId)"></span>
+            </div>
+        </div>
+    }
+</div>

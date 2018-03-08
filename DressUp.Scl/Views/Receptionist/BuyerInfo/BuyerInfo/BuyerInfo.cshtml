@@ -1,0 +1,17 @@
+﻿@model UsersVM
+<div class="buyerInfoBox">
+    <div class="buyerInfoBoxTitle">个人信息</div>
+    <div class="buyerInfoBoxContent">
+        <div>
+            <span>用  &nbsp;户  名：</span>
+            <input type="text" id="BuyerName" value="@Model.Name" />
+        </div>
+        <div>
+            <span>手机号码：</span>
+            <input type="text" id="BuyerContactInfo" maxlength="11" value="@Model.ContactInfo" />
+        </div>
+        <div class="buyerInfoBoxSubmitContent">
+            <button type="button" id="saveChange" class="button gray rarrow" onclick="ChangeBuyerInfo()">保存修改</button>
+        </div>
+    </div>
+</div>

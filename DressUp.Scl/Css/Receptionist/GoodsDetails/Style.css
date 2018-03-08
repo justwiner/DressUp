@@ -1,0 +1,105 @@
+﻿body {
+    font-family: 微软雅黑;
+    text-align: center;
+    margin: 0;
+}
+.wrapper {
+    margin:0 20%;
+    margin-top:3%;
+    text-align:center;
+}
+.goodsInfo {
+    padding: 3% 0;
+    background-color: #F6F6F6;
+}
+.wrapperHead {
+    margin-right:50%;
+    margin-bottom: 1%;
+}
+.wrapperHead span {
+    font-size:0.7em;
+    margin-right:20%;
+}
+.goodsIdBox {
+    color:gray;
+}
+.goodsId {
+    color: black;
+}
+.goodImgBox, .buyGoodsBox {
+    display:inline-block;
+    vertical-align:top;
+}
+.goodImgBox {
+    margin-left:-20%;
+}
+.buyGoodsBox {
+    text-align:left;
+    margin-left:7%;
+}
+.goodsPrice, .goodsName {
+    display:block;
+}
+.goodsPrice {
+    font-size:3em;
+}
+.goodsName {
+    margin-top:5%;
+    font-size:1.3em;
+    padding-bottom:2%;
+    border-bottom:1px solid black;
+}
+.goodsNum, .decreaseNum, .addNum {
+    background-color: #F6F6F6;
+    margin: 0;
+}
+.goodsNum {
+    outline: none;
+    width: 6%;
+    border: 0;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 0 1%;
+}
+.decreaseNum, .addNum {
+    border: 1px solid black;
+    padding: 0 3%;
+    cursor: pointer;
+}
+.inutGoodsNum {
+    margin-top:40%;
+}
+.buyGoodsBoxBut {
+    margin-top:10%;
+}
+.butBuy, .butAdd {
+    width: 40%;
+    min-height:30px;
+    cursor: pointer;
+    font-family:微软雅黑
+}
+.butBuy {
+    border:2px solid red;
+    background-color:white;
+    font-size:0.5em;
+    color:red;
+}
+.butAdd {
+    border: 2px solid red;
+    background-color: red;
+    font-size: 0.5em;
+    color: white;
+}
+.goodsAtlas {
+    text-align:center;
+    margin-top:4%;
+}
+.goodsAtlas img{
+    width:100%;
+    display:block;
+}
+.flyer-img {
+    width:5%;
+    border-radius:50%;
+    border:1px solid orange;
+}

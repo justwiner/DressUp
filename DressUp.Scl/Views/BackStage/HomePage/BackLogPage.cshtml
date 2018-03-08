@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Css/BackStage/BackStageLogCss/component.css" rel="stylesheet" />
+    <link href="~/Css/BackStage/BackStageLogCss/demo.css" rel="stylesheet" />
+    <link href="~/Css/BackStage/BackStageLogCss/BackLogPage.css" rel="stylesheet" />
+    <title>BackLogPage</title>
+</head>
+<body style="background-image: url('../../Picture/BrackGround/background_bg.png');background-repeat:no-repeat;background-size:100% 100%">
+    <div class="wrapper">
+        <div class="title">
+            <p>DressUp后台管理系统</p>
+        </div>
+        <div class="LoginBox">
+            <br>
+            <span class="LoginBoxTitle">管理员登录</span>
+            <div class="LoginBoxInput">
+                    <section class="content">
+                        <span class="input input--hoshi">
+                            <input class="input__field input__field--hoshi" type="text" name="account" id="account" autocomplete="new-password"/>
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                                <span class="input__label-content input__label-content--hoshi">Count:</span>
+                            </label>
+                        </span>
+                        <span class="input input--hoshi">
+                            <input class="input__field input__field--hoshi" type="password" name="password" id="password" autocomplete="new-password"/>
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="input-6">
+                                <span class="input__label-content input__label-content--hoshi">Password:</span>
+                            </label>
+                        </span>
+                    </section>
+                    <span class="logErro" id="logErro">密码错误，请重新输入。</span>
+                    <button class="loginButton" onclick="LogJudge()" id="logButton">登录</button>
+            </div>
+            <br>
+        </div>
+    </div>
+    @Scripts.Render("~/Scripts/jquery-1.9.1.min.js")
+    @Scripts.Render("~/Js/BackStage/GeneralOperationJs/LogJudge.js")
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿.store_findResultBox tr td{
+    font-size:12px;
+    font-weight:500;
+    text-align:center;
+}
+.store_findResultBox tr th,.store_findResultBox tr td{
+    width:135px;
+}
+.store_findResultBox {
+    width:100%;
+    border:rgb(6,217,149);
+    border-collapse:collapse;
+    margin-top:5%;
+    border:1px solid lightgrey;
+}
+.store_findResultBox td,.store_findResultBox th{
+    padding:1%;
+    border:0;
+}
+.store_findResultBox th{
+    font-size:0.7em;
+    font-weight:500;
+    background-color:rgb(6,217,149);
+    color:white;
+}
+.store_goodsImg {
+    width:120px;
+    height:100px;
+}
+.store_changePage {
+    margin-top:2%;
+    margin-left:53%;
+}
+.store_changePage input{
+    width:10%;
+}
+.store_changePage button {
+    border-radius:10%;
+    padding:1%;
+    cursor:pointer;
+    color:white;
+    border:0;
+    background-color:rgb(6,217,149);
+}
+.store_changePage a span{
+    color:rgb(6,217,149);
+}
+.store_changePage_info {
+    font-size:13px;
+}
+.table_div {
+    overflow-x:auto;
+    width:80%;
+}

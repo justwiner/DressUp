@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Css/Receptionist/SharedCss/Head.css")
+    @Styles.Render("~/Css/Receptionist/SharedCss/LoginBox.css")
+    @Styles.Render("~/Css/font-awesome.min.css")
+    @Styles.Render("~/Content/font-awesome.min.css")
+    @Styles.Render("~/Css/Receptionist/SharedCss/Tail.css")
+    @Styles.Render("~/Css/Receptionist/SharedCss/Sidebar.css")
+    @Styles.Render("~/Content/zeroModal.css")
+    @RenderSection("Css", required: false)
+</head>
+<body>
+    <div class="content">
+        @Html.Partial("~/Views/Receptionist/Index/Sidebar/Siderbar.cshtml")
+        @Html.Partial("~/Views/Receptionist/Index/Head/_ReceptionistHead.cshtml")
+        @RenderBody()
+        @Html.Partial("~/Views/Receptionist/Index/Tail/_Tail.cshtml")
+    </div>
+    @Scripts.Render("~/Scripts/jquery-1.9.1.min.js")
+    @Scripts.Render("~/Js/Receptionist/SharedJs/Head.js")
+    @Scripts.Render("~/Js/Receptionist/SharedJs/BuyerLogin.js")
+    @Scripts.Render("~/Js/Receptionist/SharedJs/SideBarShopCarts.js")
+    @Scripts.Render("~/Scripts/zeroModal.js")
+    @RenderSection("ScriptSection", required: false)
+</body>
+</html>

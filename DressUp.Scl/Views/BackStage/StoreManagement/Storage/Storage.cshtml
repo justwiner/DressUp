@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "~/Views/Shared/BcakStageFrame.cshtml";
+}
+@Styles.Render("~/Css/BackStage/StoreManagementCss/Storage/Storage.css")
+<div class="contents">
+    <div>
+        <div>
+            <span class="userinfo">
+                <span class="userinfo_">入库</span>
+                <span class="fa fa-user"></span>
+            </span>
+        </div>
+        @Html.Partial("~/Views/BackStage/StoreManagement/Storage/_StorageGoodsBox.cshtml")
+    </div>
+</div>
+
+

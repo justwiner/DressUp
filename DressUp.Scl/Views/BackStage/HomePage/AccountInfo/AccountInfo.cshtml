@@ -1,0 +1,18 @@
+﻿@using DressUp_Scl_Data.Data
+@{ 
+    Users user = System.Web.HttpContext.Current.Session["User"] as Users;
+}
+<div class="accountInformation" id="AccountInfo">
+    <div class="accountInformation-title"><span>账号信息</span></div>
+    <div class="accountInformation-Info">
+        <p>账户名: @user.Name</p>
+        <p>编号: @user.UserId</p>
+        <p>账号: @user.Account</p>
+        <p>岗位: 
+            @foreach (DressUp_Scl_Data.Data.Roles item in user.Roles)
+            {
+                @item.Name
+            }
+        </p>
+    </div>
+</div>

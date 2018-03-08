@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "BackHome";
+    Layout = "~/Views/Shared/BcakStageFrame.cshtml";
+}
+
+<div class="contents">
+    <div class="waterFallLeft">
+        @Html.Partial("~/Views/BackStage/HomePage/SetBox/_SetBox.cshtml")
+        @Html.Partial("~/Views/BackStage/HomePage/SalesStatistics/_SalesStatistics.cshtml")
+        @Html.Partial("~/Views/BackStage/HomePage/ImportExport/_ImportExport.cshtml")
+        @Html.Partial("~/Views/BackStage/HomePage/StockSubtotal/_StockSubtotal.cshtml")
+    </div>
+    <div class="waterFallRight">
+        @Html.Partial("~/Views/BackStage/HomePage/AccountInfo/_AccountInfo.cshtml")
+        @Html.Partial("~/Views/BackStage/HomePage/FinancialInfo/_FinancialInfo.cshtml")
+        @Html.Partial("~/Views/BackStage/HomePage/SalesRanking/_SalesRanking.cshtml")
+        @Html.Partial("~/Views/BackStage/HomePage/JobLog/_JobLog.cshtml")
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/jquery-1.9.1.min.js")
+@Scripts.Render("~/Js/BackStage/SaleJs/CreateStatistics.js")
+@Scripts.Render("~/Js/BackStage/SharedJs/ShowHiden/ShowOrHiden.js")

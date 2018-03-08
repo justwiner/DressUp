@@ -1,0 +1,35 @@
+﻿.focus {
+    cursor:pointer;
+}
+.content {
+    float:left;
+    margin:6% 0 0 20%;
+}
+.titleBox {
+    width:1300%;
+    padding-bottom:2%;
+    border-bottom:1px solid black;
+}
+.title {
+    color:black;
+    font-size:20px;
+}
+.remodal-title {
+    margin-bottom:3%;
+}
+.inputBox {
+    margin-left:35%;
+    margin-top:3%;
+}
+.addUserButton {
+    margin-top:5%;
+    border-radius:10%;
+    padding:1%;
+    cursor:pointer;
+    color:white;
+    border:0;
+    background-color:grey
+}
+.addUserButton:hover{
+    background-color:rgb(6,217,149)
+}

@@ -1,0 +1,116 @@
+﻿.contents {
+    float:left;
+    width:100%;
+    margin:5% 0 0 18%;
+    color:black;
+    font-family:微软雅黑;
+}
+.waterFallLeft, .waterFallRight {
+    float:left;
+    margin-right:0.7%;
+    width:40%;
+}
+.displaySetting,.accountInformation,.financialInformation,.salesStatistics,.salesRanking,.importExport,.outOfStock,.jobLog {
+    padding:1% 2%;
+    background-color:#ffffff;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    margin-bottom:2%;
+    min-height:200px;
+    font-size:0.7em;
+}
+.financialInformation {
+    text-align:center;
+}
+.displaySetting-title,.accountInformation-title,.financialInformation-title,.salesStatistics-title,.salesRanking-title,.importExport-title,.outOfStock-title,.jobLog-title{
+    padding-bottom:1%;
+    border-bottom:1px solid lightgrey;
+}
+/*Begin 显示设置 */
+.displaySetting-menu p{
+    display:inline-block;
+    margin:5% 10%;
+}
+/*End 显示设置 */
+
+/*Begin 财务  */
+.company {
+    margin-left:80%;
+    font-size:10px;
+}
+.financialInformation-Info{
+    display:inline-block;
+    text-align:center;
+    margin:2% 5.5%;
+}
+/*End  财务  */
+
+/*Begin 统计 */
+.salesStatistics-box {
+    width:90%;
+    height:100%;
+}
+/*End 统计 */
+
+/*Begin 销量排行&进出库统计&缺货预警 */
+.salesRanking-choose,.importExport-choose {
+    margin-left:60%;
+}
+.salesRanking-choose a,.importExport-choose a{
+    margin-left:1%;
+    font-size:10px;
+}
+.salesRanking-Box ,.importExport-Box,.outOfStock-Box{
+    margin-top:3%;
+}
+.salesRanking-Box table tr th,.importExport-Box table tr th,.outOfStock-Box table tr th{
+    font-weight:500;
+    font-size:14px;
+    padding-top:0;
+    padding-bottom:2%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.outOfStock-Box table tr th{
+    max-width:200px;
+}
+.salesRanking-Box table tr th{
+    max-width:150px;
+}
+.salesRanking-more button,.importExport-more button,.outOfStock-more button{
+    border-color:rgb(6,217,149);
+    font-family:微软雅黑;
+    margin:2% 0 3% 85%;
+    background-color:rgb(6,217,149);
+    color:white;
+    border-radius:10%;
+}
+
+/*End 销量排行&进出库统计&缺货预警 */
+
+/*Begin 工作日志 */
+.jobLog-info {
+    margin-top:3%;
+    border-bottom:1px solid lightgrey;
+}
+.jobLog-info-head {
+    margin-left:10%;
+}
+.jobLog-info-head span {
+    font-size:13px;
+}
+.jobLog-info-time {
+    float:right;
+    margin-right:10%;
+}
+.jobLog-info-box {
+    margin-bottom:3%
+}
+.jobLog-info-box textarea {
+    margin-top:2%;
+    margin-left:10%;
+    width:83%;
+    resize:none;
+    background-color:whitesmoke;
+}
+/*End 工作日志 */

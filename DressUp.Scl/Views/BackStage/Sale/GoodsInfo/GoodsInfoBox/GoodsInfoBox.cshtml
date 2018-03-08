@@ -1,0 +1,93 @@
+﻿@model GoodsAndAtlasSVM
+<img id="goodsInfo_goodsSimpleGraph" src="@Model.Goods.GoodsSimpleGraph" class="goodsInfo_goodsImg"/>
+<div class="goodsInfo_infoBox">
+    <div class="goodsInfo_infoBox_left">
+        <p>商品ID:<span id="goodsInfo_goodsId">@Model.Goods.GoodsId</span></p>
+        <p>商品名称:<span id="goodsInfo_GoodsName">@Model.Goods.GoodsName</span></p>
+        <p>商品简介:
+            <textarea readonly id="goodsInfo_GoodsDetail">@Model.Goods.GoodsDetail</textarea>
+        </p>
+    </div>
+    <div class="goodsInfo_infoBox_center">
+        <p>进价:<span id="goodsInfo_PurchasePrice">@Model.Goods.PurchasePrice</span></p>
+        <p>售价:<span id="goodsInfo_Price">@Model.Goods.Price</span></p>
+        <p>促销价:<span id="goodsInfo_PromotionPrice">@Model.Goods.PromotionPrice</span></p>
+        <p>库存:<span id="goodsInfo_GoodsStock">@Model.Goods.Stock</span></p>
+        <p>销量:<span id="goodsInfo_GoodsSaleNum">@Model.Goods.GoodsSaleNum</span></p>
+        <p>上架数量:<span id="goodsInfo_ShelvesNum">@Model.Goods.ShelvesNum</span></p>
+    </div>
+    <div class="goodsInfo_infoBox_right">
+        <p>上架时间:<span id="goodsInfo_OnShelfTime">@Model.Goods.OnShelfTime</span></p>
+        <p>下架时间:<span id="goodsInfo_OffShelfTime">@Model.Goods.OffShelfTime</span></p>
+        <p>是否新品:<span id="goodsInfo_IfNewGoods">@Model.Goods.IfNewGoods</span></p>
+        <p>是否促销:<span id="goodsInfo_IfHot">@Model.Goods.IfHot</span></p>
+        <p>类别:<span id="goodsInfo_ClassificationId">@Model.Goods.ClassificationId</span></p>
+        <p>状态:<span id="goodsInfo_GoodsStatus">@Model.Goods.GoodsStatus</span></p>
+    </div>
+</div>
+@*  -------------------------------------------------------------------------------   *@
+<p class="goodsInfo_changeTitle">修改商品信息</p>
+<div>
+    <div class="goodsInfo_changeBox_left">
+        <p>商品名称:
+            <input type="text" id="goodsInfo_name" value="@Model.Goods.GoodsName"/>
+        </p>
+        <p>商品简介:
+            <textarea id="goodsInfo_detail">@Model.Goods.GoodsDetail</textarea>
+        </p>
+    </div>
+    <div class="goodsInfo_changeBox_right">
+        <p>售价:
+            <input type="number" id="goodsInfo_price" value="@Model.Goods.Price"/>
+        </p>
+        <p >是否促销:
+            <select onchange="GoodsInfoChangeSelect(this.value, 'goodsInfo_promotionPrice_')" id="goodsInfo_changeBox_ifPromotion">
+                <option>否</option>
+                <option>是</option>
+            </select>
+        </p>
+        <p id="goodsInfo_promotionPrice_">促销价:
+            <input id="goodsInfo_promotionPrice" type="number" value="@Model.Goods.PromotionPrice"/>
+        </p>
+        <p>是否上架:
+            <select onchange="GoodsInfoChangeSelect(this.value, 'goodsInfo_shelvesNum_')" id="goodsInfo_changeBox_ifOnShelf">
+                <option>否</option>
+                <option>是</option>
+            </select>
+        </p>
+        <p id="goodsInfo_shelvesNum_">上架数量:
+            <input id="goodsInfo_shelvesNum" type="number" value="@Model.Goods.ShelvesNum" />
+        </p>
+        <div><button onclick="GoodsInfo_submit()">确认修改</button></div>
+    </div>
+</div>
+<div>
+@using (Html.BeginForm("ChangeSimpleGraph", "Sale", FormMethod.Post, new { enctype = "multipart/form-data" })) { 
+    <p>
+        修改宣传图:
+        <input type="file" id="goodsChangeImgBut" onchange="upload(this.files,'imgBox')" accept="image/pjpeg" name="simpleGraph"/>
+        <input type="submit"  class="changeImgButton" value="确认修改" />
+        <div id="imgBox" class="changeImgBox">
+            <img src="@Model.Goods.GoodsSimpleGraph" class="goodsChangeImgBox" id="goodsChangeImgBox"/>
+        </div>
+    </p>
+}
+@using (Html.BeginForm("ChangeGoodsAtlas", "Sale", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="changeImgBox">
+        <p>
+            修改详情图:
+            <input type="file" id="goodsInfo_graph" name="fileToUpload" onchange="upload(this.files,'imgsBox')" accept="image/pjpeg" multiple="multiple" />
+            <input type="submit" class="changeImgButton" value="确认修改" />
+        </p>
+        <span id="imgsBox" class="imgsBox">
+            @foreach (GoodsAtlasVM item in Model.Atlas)
+            {
+                <img src="@item.Img" class="goodsChangeImgsBox" id="goodsChangeImgBox" />
+
+            }
+        </span>
+    </div>
+}
+</div>
+

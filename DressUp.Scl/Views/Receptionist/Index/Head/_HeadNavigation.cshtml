@@ -1,0 +1,32 @@
+﻿@using DressUp_Scl_Service.Model
+<div class="head_Navigation">
+    <div class="head_Navigation_search">
+        <img src="~/Picture/Logo.png" />
+        <span class="head_Navigation_input">
+            <input class="head_Navigation_inutBox" type="text" id="searchText" placeholder="我们一起装扮家！"/>
+            <a class="pointer" onclick="SearchGoods()"><span class="fa fa-search-plus"></span></a>
+        </span>
+    </div>
+    <div class="head_Navigation_GoodsType">
+        <div class="goodsTypes">
+            <ul class="head_Navigation_GoodsTypeList">
+                <li class="head_Navigation_GoodsTypeList_title"><a href="/ShowGoods/Index" class="menuTitle homePage">首页</a></li>
+                @foreach (GoodsTypes_ item in Model)
+                {
+                    <li class="mainMenu  head_Navigation_GoodsTypeList_title">
+                        <a href="#" class="menuTitle">@item.TypeName</a>
+                        @if (item.Children.Count != 0) {
+                            <ul class="subMenu">
+                                @foreach (GoodsTypes_ m in item.Children) {
+                                    <li>
+                                        <a href="/ShowGoods/SetGoodsPageListById?typeId=@m.TypeId" target="_blank">@m.TypeName</a>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

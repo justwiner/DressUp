@@ -1,0 +1,33 @@
+﻿@using DressUp_Scl_Service.Model
+
+<div>
+    <div class="goodsTypes">
+        <div class="goodsTypes-title">
+            <span class="title">类别</span>
+        </div>
+        <div class="goodsTypes-box">
+            <div><a name="type" id="400" href="#" class="types-title" onclick="ChangeColor('type', this); ShourageWarningFindJudge('type', 'status'); SaleGetTotalPageNum()">所有</a></div>
+            @foreach (GoodsTypes_ item in Model)
+            {
+                <div class="bigType">
+                    <a name="type" href="#" id="@item.TypeId" onclick="ChangeColor('type', this); ShourageWarningFindJudge('type', 'status'); SaleGetTotalPageNum()" class="types-title">@item.TypeName</a>
+                    @if (item.Children != null)
+                    {
+                        <ul class="types">
+                            @foreach (GoodsTypes_ m in item.Children)
+                            {
+                                <li><a name="type" href="#" id="@m.TypeId" onclick="ChangeColor('type', this); ShourageWarningFindJudge('type', 'status'); SaleGetTotalPageNum()">@m.TypeName</a></li>
+                            }
+                        </ul>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+    <div class="findBox-title">
+        <span class="title">状态</span>
+        <a name="status" id="400" href="#" onclick="ChangeColor('status', this); ShourageWarningFindJudge('type', 'status'); SaleGetTotalPageNum()">所有</a>
+        <a name="status" id="1" href="#" onclick="ChangeColor('status', this); ShourageWarningFindJudge('type', 'status'); SaleGetTotalPageNum()">在售</a>
+        <a name="status" id="-1" href="#" onclick="ChangeColor('status', this); ShourageWarningFindJudge('type', 'status'); SaleGetTotalPageNum()">下架</a>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+﻿.tail {
+    height:10%;
+    background-color:#3b3b3b;
+    padding:1% 0 1% 0;
+}
+.tail span{
+    color:white;
+    font-size:10px;
+}
+.tailPic {
+    width:100%;
+}

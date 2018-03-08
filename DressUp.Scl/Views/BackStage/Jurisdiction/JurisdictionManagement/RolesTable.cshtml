@@ -1,0 +1,14 @@
+﻿<div class="table">
+    <div class="table_div">
+        <table class="findResultBox" border="1" cellpadding="0" id="table"></table>
+    </div>
+    <div class="changePage">
+        <button id="butPre" class="changePage_button" onclick="ChangePre('Jurisdiction','GoPage')">上一页</button>
+        <a class="changePage_info">第 <span id="nowPage">@Model.pageNow</span> 页</a>
+        <button id="butNext" class="changePage_button" onclick="ChangeNext('Jurisdiction', 'GoPage')">下一页</button>
+        <a class="changePage_info">共 <span id="totalPage">@Model.pageTotal</span> 页，到</a>
+        <input id="page" type="number" />
+        <a class="changePage_info">页</a>
+        <button onclick="GoPageNum('Jurisdiction', 'GoPage')">确定</button>
+    </div>
+</div>

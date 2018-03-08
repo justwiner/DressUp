@@ -1,0 +1,57 @@
+﻿@model GoodsAndAtlasSVM
+@{
+    Layout = "~/Views/Shared/ReceptionistFrame.cshtml";
+    ViewBag.Title = TempData["GoodsName"] + "- 装扮家";
+}
+@section Css{
+    @Styles.Render("~/Content/magiczoomplus.css")
+    @Styles.Render("~/Css/Receptionist/GoodsDetails/GoodsDetails.css")
+}
+<div class="contentBox">
+    <form method="post" action="/ShowGoods/OrdersInfo" onsubmit="return GoodsDetailBuyerIfLogin()">
+    <input type="text" style="display:none" name="conciseOrders[0].IfChecked" value="true" />
+    <div class="wrapper">
+        <div class="wrapperHead">
+            <span class="titleGoodsName">@Model.Goods.GoodsName</span>
+            <span class="goodsIdBox">
+                编号
+                <span class="goodsId" id="goodsId" >@Model.Goods.GoodsId</span>
+                <input type="text" style="display:none" name="conciseOrders[0].GoodsId" value="@Model.Goods.GoodsId"/>
+            </span>
+        </div>
+        <div class="goodsInfo">
+            <div class="goodImgBox">
+                <a href="@Model.Goods.GoodsSimpleGraph" id="zoom1" class="MagicZoom MagicThumb">
+                    <img src="@Model.Goods.GoodsSimpleGraph" id="main_img" class="main_img"/>
+                </a>
+            </div>
+            <div class="buyGoodsBox">
+                <span class="goodsPrice">￥@Model.Goods.Price</span>
+                <span class="goodsName">@Model.Goods.GoodsName</span>
+                <div class="inutGoodsNum">
+                    <span>数量：</span>
+                    <span class="decreaseNum" id="decreaseNum" onclick="decreaseNum()">-</span>
+                    <input type="text" class="goodsNum" id="goodsNum" value="1" name="conciseOrders[0].GoodsNum" onkeyup="value=value.replace(/[^\d]/g,'')" />
+                    <span class="addNum" id="addNum" onclick="addNum()">+</span>
+                    <span>件</span>
+                </div>
+                <div class="buyGoodsBoxBut">
+                    <button class="butBuy" type="submit">立即购买</button>
+                    <button class="butAdd" onclick="AddShopCartsGoods()" id="addGoods">加入购物车</button>
+                </div>
+            </div>
+        </div>
+        <div class="goodsAtlas">
+            @foreach (GoodsAtlasVM item in Model.Atlas)
+            {
+                <img src="@item.Img" />
+            }
+        </div>
+    </div>
+    </form>
+</div>
+@section ScriptSection{
+<script src="~/Scripts/mzp-packed.js"></script>
+<script src="~/Scripts/jquery.fly.min.js"></script>
+<script src="~/Js/Receptionist/GoodsDetails/GoodsInfoPage.js"></script>
+}

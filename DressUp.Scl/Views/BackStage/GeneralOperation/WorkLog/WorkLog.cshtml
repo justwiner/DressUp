@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/Views/Shared/BcakStageFrame.cshtml";
+}
+<div class="contents">
+    <div>
+        <div>
+            <span class="userinfo">
+                <span class="userinfo_">工作日志</span>
+                <span class="fa fa-users"></span>
+            </span>
+        </div>
+    </div>
+    @Html.Partial("~/Views/BackStage/GeneralOperation/WorkLog/_FindMode.cshtml")
+    @Html.Partial("~/Views/BackStage/GeneralOperation/WorkLog/RecordPage/_RecordsPage.cshtml")
+</div>
+@section ScriptSection{
+@Scripts.Render("~/Js/BackStage/GeneralOperationJs/WorkLog.js")
+}

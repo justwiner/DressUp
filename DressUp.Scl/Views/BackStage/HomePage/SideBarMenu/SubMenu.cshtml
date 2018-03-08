@@ -1,0 +1,14 @@
+﻿@model List<MenusSVM>
+<ul data-menu="submenu-@Model.ElementAt(0).FatherID" class="menu__level">
+    @foreach (MenusSVM item in Model)
+    {
+        if (item.IfHasChildren())
+        {
+            <li class="menu__item"><span class="fa @item.Icon" style="margin-right:5%;width:18px"></span><a class="menu__link" data-submenu="submenu-@item.Id" href="@item.Url">@item.Name</a></li>
+        }
+        else
+        {
+            <li class="menu__item"><span class="fa @item.Icon" style="margin-right:5%;width:18px"></span><a class="menu__link" href="@item.Url">@item.Name</a></li>
+        }
+    }
+</ul>

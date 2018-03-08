@@ -1,0 +1,23 @@
+﻿@using DressUp_Scl_Service.Model
+<div class="store_Storage">
+    <p>新品入库</p>
+    <div class="newGoodsStorage_title">
+        <span>商品名</span>
+        <span>商品类型</span>
+        <span>入库数量</span>
+        <span>商品进价</span>
+    </div>
+    <div class="newGoodsStorage_input">
+        <input type="text" id="storage_goodsName"/>
+        <select id="storage_goodsType">
+            @foreach (GoodsTypes_ item in Model)
+            {
+                <option>@item.TypeName</option>
+            }
+        </select>
+        <input type="number" id="storage_goodsNum"/>
+        <input type="number" id="storage_purchasePrice" />
+        <button onclick="newStorage()">确定</button>
+    </div>
+    
+</div>

@@ -1,0 +1,24 @@
+﻿@model List<OrdersSVM>
+
+@if (Model != null)
+{
+    foreach (OrdersSVM item in Model)
+    {
+        <tr class="OrdersDetailInfo">
+            <td class="maxLength pointer hoverImportant" onclick="SeeOrderDetail('@item.OrderNum')">@item.OrderNum</td>
+            <td class="maxLength">@item.OrderGenerationTime</td>
+            <td class="imgBox" title="@item.GoodsName"><img src="@item.GoodsImg" /></td>
+            <td>￥@item.GoodsPrice</td>
+            <td>@item.GoodsNum</td>
+            <td class="importantText">￥@(item.GoodsPrice * item.GoodsNum)</td>
+            <td>
+                <p>@item.OrderStatus</p>
+            </td>
+            <td>
+                <p class="pointer delOrder" id="@item.OrderNum+A" onclick="ApplyRefund('@item.OrderNum')">申请退款</p>
+                <p class="pointer delOrder" id="@item.OrderNum+C" onclick="ConfirmReceipt('@item.OrderNum')">确认收货</p>
+            </td>
+        </tr>
+    }
+}
+

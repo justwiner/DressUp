@@ -1,0 +1,42 @@
+﻿.categoryTitle {
+    width:82%;
+    padding-top:4%;
+    padding-bottom:1%;
+    margin-left:9%;
+    border-bottom:1px dotted black;
+    text-align:left;
+}
+.categoryTitleChinese {
+    font-size:25px;
+    color:red;
+}
+.categoryTitleEnglish {
+    color:gray;
+    font-size:18px;
+}
+.categoryContent {
+    width:100%;
+    background-color:white;
+}
+.allGoodsShow {
+    display:none;
+    width:20%;
+    height:30px;
+    margin-left:40%;
+    font-size:0.5em;
+    height:auto;
+    border:#909090 1px solid;
+    background:#fff;
+    color:#333;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=3);/*ie*/
+    -moz-box-shadow: 2px 2px 10px #909090;/*firefox*/
+    -webkit-box-shadow: 2px 2px 10px #909090;/*safari或chrome*/
+    box-shadow:2px 2px 10px #909090;/*opera或ie9*/
+}
+.categoryButtom {
+    padding-bottom:20%;
+}
+.notFound {
+    color:grey;
+    font-size:1.3em;
+}

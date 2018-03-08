@@ -1,0 +1,42 @@
+﻿@model UsersInfoSVM
+<div class="buyerInfoHomePage">
+    <div class="helloBuyer">
+        <span>您好，@Model.Name，欢迎光临装扮家</span>
+    </div>
+    <div class="accountInfo">
+        <ul>
+            <li>
+                <span>账户信息:</span>
+                <div class="dividingLine inlineRight">
+                    <span>您目前的会员级别： </span>
+                    <span class="importantText">普通会员</span>
+                </div>
+            </li>
+            <li>
+                <span>交易提醒:</span>
+                <div class="inlineRight">
+                    <span class="pointer">待确认收货(<span class="importantText">@Model.WaitReceivingOrdersNum</span>)</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="nearlyOrder">
+        <div>
+            <div class="nearlyOrderTitle">
+                <span>最近的订单</span>
+            </div>
+            <table cellspacing="0" cellpadding="0">
+                <tr class="nearlyOrderTitleBox">
+                    <td>订单编号</td>
+                    <td>商品</td>
+                    <td>创建时间</td>
+                    <td>订单状态</td>
+                    <td>操作</td>
+                </tr>
+                <tbody>
+                    @Html.Action("GetNearlyOrder", "User")
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+﻿.buyerNoReceivingAddress{
+    margin-top:2%;
+    font-size:0.7em;
+    display:none;
+}
+.buyerNoReceivingAddress a{
+    cursor:pointer;
+    color:red;
+}
+/*********************************/
+.buyerAddReceivingAddress {
+    margin-top: 2%;
+}
+.buyerAddReceivingAddress span {
+    font-size: 0.7em;
+}
+.buyerAddReceivingAddress span a {
+    cursor: pointer;
+    color: red;
+}
+.showReceivingAddress {
+    margin-top:2%;
+}
+.showReceivingAddress table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 微软雅黑;
+    text-align: center;
+    font-size: 0.2em;
+    color: grey;
+    border: 1px solid lightgrey;
+}
+.showReceivingAddress table thead tr td{
+    padding:1%;
+}
+.receivingAddressInfo td {
+    padding:2%;
+    border: 1px solid lightgrey;
+}
+.edit {
+    margin-right:10%;
+    color:forestgreen;
+}
+.remove {
+    color:red;
+}
+.receivingAddress {
+    width:30%;
+}
+.receivingAddressPage {
+    margin-top:3%;
+}

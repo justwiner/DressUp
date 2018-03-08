@@ -1,0 +1,47 @@
+﻿<div class="buyerReceivingAddressBox">
+    <div class="buyerInfoBoxTitle">我的收货地址</div>
+    <div class="buyerHadReceivingAddress">
+        <div class="buyerAddReceivingAddress">
+            <span>收货地址不够用?点击<a onclick="AddReceivingAddress()">添加</a>即可。</span>
+        </div>
+        <div class="showReceivingAddress">
+            <table id="receivingAddressBox">
+                <thead>
+                    <tr>
+                        <td>地址</td>
+                        <td>收货人</td>
+                        <td>联系方式</td>
+                        <td>是否默认</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+                <tbody id="receivingAddressContent">
+                    @Html.Action("GetUserReceivingInfo","User")
+                </tbody>
+            </table>
+            <div id="receivingAddressPage" class="receivingAddressPage"></div>
+        </div>
+    </div>
+</div>
+<div id="addReceivingBox" class="addReceivingBox">
+    <div class="inputNewAddressBox" id="inputNewAddressBox">
+        <p>
+            <span class="mustInput">*</span>
+            <span>收件人&nbsp;&nbsp;&nbsp;：</span>
+            <input type="text" id="newConsignee"/>
+        </p>
+        <p>
+            <span class="mustInput">*</span>
+            <span>详细地址：</span>
+            <input type="text" id="newReceiptAddress"/>
+        </p>
+        <p>
+            <span class="mustInput">*</span>
+            <span>手机号码：</span>
+            <input type="text" maxlength="11" onkeyup="value = value.replace(/[^\d]/g, ''); " id="newContactInfo" />
+        </p>
+        <p>
+            <button id="saveAddressBut" class="saveAddressBut" onclick="SaveNewAddress(); Colse()">保存收货人信息</button>
+        </p>
+    </div>
+</div>

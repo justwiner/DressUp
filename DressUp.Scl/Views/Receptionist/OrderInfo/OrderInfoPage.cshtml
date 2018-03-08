@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/ReceptionistFrame.cshtml";
+    ViewBag.Title = "订单支付";
+}
+@model List<ConciseOrder>
+@section Css{
+<link href="~/Content/zeroModal.css" rel="stylesheet" />
+<link href="~/Css/Receptionist/PayOrder/Style.css" rel="stylesheet" />
+<link href="~/Content/layer.css" rel="stylesheet" />
+<link href="~/Content/layui.css" rel="stylesheet" />
+}
+<div class="smaleContent">
+    <div class="wrapper">
+        <div class="wrapperHead">
+            <span class="payOrderIcon icon-calendar"></span>
+            <span class="payOrderTitle">我的订单</span>
+        </div>
+        @Html.Action("GetDefaultReceivingInfo", "User")
+    </div>
+    @Html.Action("ShowOrders", "User" ,new { conciseOrders = Model })
+    <div class="orderButtom">
+        10000+甄选家品
+    </div>
+</div>
+@section ScriptSection{
+<script src="~/Scripts/layer.js"></script>
+<script src="~/Scripts/zeroModal.js"></script>
+<script src="~/Js/Receptionist/PayOrder/PayOrder.js"></script>
+}

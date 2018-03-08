@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="953aea3bb5b745db9a2a60eacaa7dad6" Name="Diagram1">
+        <EntityTypeShape EntityType="DressUpWebDbModel.ActionPermissons" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DressUpWebDbModel.Ads" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DressUpWebDbModel.Goods" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DressUpWebDbModel.GoodsAtlas" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DressUpWebDbModel.GoodsTypes" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DressUpWebDbModel.Menus" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DressUpWebDbModel.OperationRecords" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DressUpWebDbModel.Orders" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DressUpWebDbModel.Permissions" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DressUpWebDbModel.PurchaseList" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DressUpWebDbModel.ReceivingInfos" Width="1.5" PointX="7.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DressUpWebDbModel.Roles" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DressUpWebDbModel.ShipmentList" Width="1.5" PointX="9.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DressUpWebDbModel.ShoppingCarts" Width="1.5" PointX="7.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DressUpWebDbModel.Users" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="DressUpWebDbModel.FK_GOODSATL_REFERENCE_GOODS" ManuallyRouted="false" />
+        <AssociationConnector Association="DressUpWebDbModel.FK_ORDERS_REFERENCE_USERS" ManuallyRouted="false" />
+        <AssociationConnector Association="DressUpWebDbModel.FK_RECEIVIN_REFERENCE_USERS" ManuallyRouted="false" />
+        <AssociationConnector Association="DressUpWebDbModel.FK_SHOPPING_REFERENCE_USERS" ManuallyRouted="false" />
+        <AssociationConnector Association="DressUpWebDbModel.RolePermissions" ManuallyRouted="false" />
+        <AssociationConnector Association="DressUpWebDbModel.UserPermissions" ManuallyRouted="false" />
+        <AssociationConnector Association="DressUpWebDbModel.UserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

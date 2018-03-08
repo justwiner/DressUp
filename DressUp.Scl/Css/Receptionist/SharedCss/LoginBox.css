@@ -1,0 +1,74 @@
+﻿body {
+    font-family:微软雅黑;
+}
+.shadowLayer, .loginBox {
+    display:none;
+}
+.shadowLayer {
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:1300;
+    background-color:black;
+    filter:alpha(opacity=50);
+    opacity: 0.5; 
+    margin-top:-3%;
+}
+.loginBox {
+    position:fixed;
+    z-index:1301;
+    padding:0 2% 1% 2%;
+    margin:4% 0 0 10%;
+    background-color:white;
+    min-width:1029px;
+}
+.loginBox_img {
+    padding:2% 0;
+}
+.butDel {
+    margin-top:0;
+    margin-left:99.7%;
+    cursor:pointer;
+}
+.loginBox_right {
+    padding:0 3% 0 5%;
+}
+.loginBox_right ,.loginBox_img{
+    display:inline-block;
+    vertical-align:top;
+}
+.loginBox_right input{
+    padding:4%;
+    display:block;
+    margin-top:20%;
+    width:100%;
+    height:25px;
+    font-size:18px;
+}
+.loginBoxTitle {
+    font-size:16px;
+    padding-bottom:3%;
+    border-bottom:1px solid red;
+}
+.loginBut {
+    margin-top:20%;
+    display:block;
+    width:110%;
+    height:50px;
+    font-size:18px;
+    background-color:black;
+    border:0;
+    color:white;
+    cursor:pointer;
+}
+.loginError{
+    display:none;
+    color:red;
+    font-size:0.1em;
+}
+.register {
+    float:right;
+    color:red;
+    font-size:12px;
+    margin-top:20%;
+}

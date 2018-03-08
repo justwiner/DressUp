@@ -1,0 +1,131 @@
+﻿body {
+    text-align:center;
+    margin:0;
+    font-family:微软雅黑;
+    background-color:whitesmoke;
+    overflow-x:hidden;
+}
+
+button{
+    outline:none;
+}
+
+.pointer {
+    cursor:pointer;
+}
+
+.buyerAccount,.buyerPassword{
+    font-family:微软雅黑;
+    -webkit-box-shadow : 0 0 0px 1000px white inset ;
+    border : 1px solid #CCC !important ;
+    outline:none;
+}
+
+a {
+    color:black;
+    text-decoration:none;
+}
+
+.head a:hover {
+    color:rgb(253,102,67);
+}
+
+.head_Login {
+    font-size:0.5em;
+}
+
+.head_Login_button li ,.head_Login_button,.head_Navigation_GoodsTypeList li{
+    display:inline-block;
+}
+
+.head_Login_button_myShopCar {
+    color:black;
+}
+
+.head_Login_button_myShopCarNum {
+    color:rgb(253,102,67);
+}
+
+.head_Login .head_Login_title {
+    margin-left:5%;
+    color:rgb(200,102,40);
+}
+
+.head_Login_button {
+    margin-left:57%;
+}
+
+.head_Navigation,.head_Navigation_GoodsType {
+    background-color:white;
+}
+
+.head_Navigation img {
+    width:20%;
+    margin-left:35%;
+    vertical-align:middle;
+}
+
+.head_Navigation_search {
+    border-bottom:1px dotted black;
+}
+
+.head_Navigation_input {
+    margin-left:16%;
+    border: 2px solid grey;
+    padding:0.2%;
+}
+
+.head_Navigation_inutBox {
+    padding:0.1%;
+    border:none;
+    outline:none;
+}
+
+.head_Navigation_GoodsType{
+    box-shadow: 0px 6px 6px rgba(34, 25, 25, 0.2);
+}
+
+.mainMenu ul {
+    box-shadow: 0px 6px 6px rgba(235, 227, 227, 0.70);
+}
+
+.head_Navigation_GoodsTypeList_title {
+    margin-right:2%;
+    margin-bottom:1%;
+}
+
+.menuTitle{
+    font-size:20px;
+}
+
+.homePage {
+    color:rgb(253,102,67);
+}
+
+.mainMenu ul {
+    padding:1% 0;
+    width:110%;
+    margin-left:-57%;
+    background-color:white;
+    display:none;
+    position:absolute;
+    border-top:1px dotted black;
+}
+
+.mainMenu li {
+    margin-right:1%;
+    list-style:none;
+}
+
+.nav_scroll {
+    position:fixed;
+    width:100%;
+    margin:0;
+    left:0;
+    top:0;
+    z-index:2000;
+}
+
+.subMenu {
+    z-index:10;
+}

@@ -1,0 +1,15 @@
+﻿<div id="table_goods">
+    <div class="table_div">
+        <table class="store_findResultBox" border="1" cellpadding="0" id="saleNewOrderTable"></table>
+    </div>
+    <div class="store_changePage">
+        <button id="AllOrder_butPre" class="store_changePage_button" onclick="NewOrderChangePre()">上一页</button>
+        <a class="store_changePage_info">第 <span id="AllOrder_nowPage">@Model.pageNow</span> 页</a>
+        <button id="AllOrder_butNext" class="store_changePage_button" onclick="NewOrderChangeNext()">下一页</button>
+        <a class="store_changePage_info">共 <span id="AllOrder_totalPage">@Model.pageTotal</span> 页，到</a>
+        <input id="AllOrder_page" type="number" />
+        <a class="store_changePage_info">页</a>
+        <button onclick="AllOrderGoPageNum()">确定</button>
+    </div>
+</div>
+

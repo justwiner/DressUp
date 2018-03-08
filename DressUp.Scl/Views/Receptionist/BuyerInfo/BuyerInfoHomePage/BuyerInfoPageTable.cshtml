@@ -1,0 +1,16 @@
+﻿@model List<OrdersSVM>
+@if (Model != null)
+{
+    foreach (OrdersSVM item in Model)
+    {
+        <tr class="nearlyOrderInfoBox">
+            <td class="orderId">@item.OrderNum</td>
+            <td class="orderImgBox" title="@item.GoodsName">
+                <img src="@item.GoodsImg" />
+            </td>
+            <td>@item.OrderGenerationTime</td>
+            <td>@item.OrderStatus</td>
+            <td class="pointer" onclick="SeeOrderDetail('@item.OrderNum')">查看详情</td>
+        </tr>
+    }
+}

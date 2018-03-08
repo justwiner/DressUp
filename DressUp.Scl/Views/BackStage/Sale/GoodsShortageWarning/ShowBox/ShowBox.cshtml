@@ -1,0 +1,13 @@
+﻿<div id="table_goods">
+    <div class="table_div"><table class="store_findResultBox" border="1" cellpadding="0" id="saleShortageWarningTable"></table></div>
+    <div class="store_changePage">
+        <button id="sale_butPre" class="store_changePage_button" onclick="ShortageWarningChangePre()">上一页</button>
+        <a class="store_changePage_info">第 <span id="sale_nowPage">@Model.pageNow</span> 页</a>
+        <button id="sale_butNext" class="store_changePage_button" onclick="ShortageWarningChangeNext()">下一页</button>
+        <a class="store_changePage_info">共 <span id="sale_totalPage">@Model.pageTotal</span> 页，到</a>
+        <input id="sale_page" type="number"/>
+        <a class="store_changePage_info">页</a>
+        <button onclick="ShortageWarningGoPageNum()">确定</button>
+    </div>
+</div>
+

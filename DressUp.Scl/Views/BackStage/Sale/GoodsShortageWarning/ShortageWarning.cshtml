@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Views/Shared/BcakStageFrame.cshtml";
+}
+@Styles.Render("~/Css/BackStage/SaleCss/ShortageWarning.css")
+<div class="contents">
+    <div>
+        <div>
+            <span class="userinfo">
+                <span class="userinfo_">库存预警</span>
+                <span class="fa fa-database"></span>
+            </span>
+        </div>
+        <div class="store_search">
+            <span>商品名搜索:</span>
+            <input type="text" id="goodsName">
+            <button onclick="ShourageWarningVagueSearch(); SaleGetTotalPageNum()">确定</button>
+        </div>
+        <div class="fastFind">
+            <span class="fastFind-title">快速查找</span>
+        </div>
+        @*<img src="" onload="ShortageWarningGoPage(1); SaleButtonJudge()"/>*@
+        @Html.Partial("~/Views/BackStage/Sale/GoodsShortageWarning/SearchByType/_SearchByType.cshtml")
+        @Html.Partial("~/Views/BackStage/Sale/GoodsShortageWarning/ShowBox/_ShowBox.cshtml")
+        @Html.Partial("~/Views/BackStage/Sale/GoodsShortageWarning/InputPurchaseBox/InputPurchaseBox.cshtml")
+    </div>
+</div>
+@Scripts.Render("~/Scripts/jquery-1.9.1.min.js")
+@Scripts.Render("~/Js/BackStage/SaleJs/ShortageWarning.js")

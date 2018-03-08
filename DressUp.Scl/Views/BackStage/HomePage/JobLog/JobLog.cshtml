@@ -1,0 +1,17 @@
+﻿@model List<OperationRecordsVM>
+<div class="jobLog" id="JobLog">
+    <div class="jobLog-title"><span>工作日志</span></div>
+    @foreach (OperationRecordsVM item in Model)
+    {
+        <div class="jobLog-info">
+            <div class="jobLog-info-head">
+                <span>@item.OperationType</span>
+                <span class="jobLog-info-time">@item.RecordingTime</span>
+            </div>
+            <div class="jobLog-info-box">
+                <textarea disabled="disabled">@item.Details</textarea>
+            </div>
+        </div>
+    }
+    <div><a href="/GeneralOperation/WorkLog" style="margin-left:90%">更多</a></div>
+</div>

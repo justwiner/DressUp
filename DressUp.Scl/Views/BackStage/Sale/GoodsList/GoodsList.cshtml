@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/BcakStageFrame.cshtml";
+}
+
+<div class="contents">
+    <div>
+        <div>
+            <span class="userinfo">
+                <span class="userinfo_">商品列表</span>
+                <span class="fa fa-database"></span>
+            </span>
+        </div>
+        <div class="store_search">
+            <span>商品名搜索:</span>
+            <input type="text" id="goodsName">
+            <button onclick="SaleVagueSearch(); SaleGetTotalPageNum()">确定</button>
+        </div>
+        <div class="fastFind">
+            <span class="fastFind-title">快速查找</span>
+        </div>
+        @*<img src="" onload="SaleGoPage(1); SaleButtonJudge()"/>*@
+        @Html.Partial("~/Views/BackStage/Sale/GoodsList/SearchMode/_SearchMode.cshtml")
+        @Html.Partial("~/Views/BackStage/Sale/GoodsList/ShowBox/_ShowBox.cshtml")
+    </div>
+</div>
+@Scripts.Render("~/Scripts/jquery-1.9.1.min.js")
+@Scripts.Render("~/Js/BackStage/SaleJs/GoodsList.js")

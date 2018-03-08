@@ -1,0 +1,44 @@
+﻿@model SimpleOrderInfoSVM
+<div class="buyerOrders">
+    <div class="buyerOrdersSimpleInfo">
+        <span class="allOrder orderItem pointer">
+            <span>全部订单</span>
+            <span class="importantText" onclick="GoOrderPageByStatus(1)">(@Model.AllOrdersNum)</span>
+        </span>
+        <span class="waitReceptionOrder orderItem pointer">
+            <span>等待确认收货的订单</span>
+            <span class="importantText" onclick="GoOrderPageByStatus(2)">(@Model.WaitReceivingNum)</span>
+        </span>
+        <span class="orderTitle importantText">订&nbsp;单&nbsp;回&nbsp;收&nbsp;站</span>
+    </div>
+    <div class="buyerOrdersDetailBox">
+        <table cellspacing="0">
+            <tr class="OrdersDetailTitle">
+                <td>订单编号</td>
+                <td>生成时间</td>
+                <td>订单商品</td>
+                <td>单价</td>
+                <td>数量</td>
+                <td>商品总额</td>
+                <td>
+                    <select name="country-nofake" class="default" id="ordersStatus" onchange="SelectByStatusId()">
+                        <option value="1">所有</option>
+                        <option value="2">已支付</option>
+                        <option value="3">已发货</option>
+                        <option value="4">已完成</option>
+                        <option value="5">已失效</option>
+                        <option value="6">退款中</option>
+                        <option value="7">未退款</option>
+                        <option value="8">已退款</option>
+                        <option value="9">待发货</option>
+                    </select>
+                </td>
+                <td>操作</td>
+            </tr>
+            <tbody id="orderInfoBox">
+                @Html.Action("GetAllOrder", "User",new { page = 1})
+            </tbody>
+        </table>
+    </div>
+    <div id="orderPage"></div>
+</div>

@@ -1,0 +1,54 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Css/font-awesome.min.css")
+    @Styles.Render("~/Css/BackStage/SharedCss/Sidebar/default.css")
+    @Styles.Render("~/Css/BackStage/SharedCss/Sidebar/component.css")
+    @Styles.Render("~/Css/BackStage/SharedCss/Style.css")
+    @Styles.Render("~/Css/BackStage/SharedCss/Header/NavigationBar.css")
+    @Styles.Render("~/Css/BackStage/SharedCss/Footer/Footer.css")
+    @Styles.Render("~/Css/BackStage/GeneralOperationCss/UserInfo.css")
+    @Styles.Render("~/Css/BackStage/BackHomeCss/BackHome.css")
+    @Styles.Render("~/Css/BackStage/StoreManagementCss/StoreCheck/StoreType.css")
+    @Styles.Render("~/Css/BackStage/StoreManagementCss/StoreCheck/findBox.css")
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="wrapper">
+        @Html.Partial("~/Views/BackStage/HomePage/NavigationBar/_NavigationBar.cshtml")
+        @Html.Partial("~/Views/BackStage/HomePage/SideBarMenu/_SideBarMenu.cshtml")
+        @RenderBody()
+        @Html.Partial("~/Views/BackStage/HomePage/Footer/_Footer.cshtml")
+    </div>
+    @Scripts.Render("~/Scripts/jquery-1.9.1.min.js")
+    @Scripts.Render("~/Scripts/highcharts.js")
+    @Scripts.Render("~/Js/BackStage/SharedJs/Sidebar/modernizr-custom.js")
+    @Scripts.Render("~/Js/BackStage/SharedJs/Sidebar/classie.js")
+    @Scripts.Render("~/Js/BackStage/SharedJs/Sidebar/main.js")
+    @Scripts.Render("~/Js/BackStage/SharedJs/Heder/drop-downMenu.js")
+    @Scripts.Render("~/Js/BackStage/SharedJs/Footer/move.js")
+    @Scripts.Render("~/Js/BackStage/GeneralOperationJs/ShowNewMessage.js")
+    <script>
+	(function() {
+		var menuEl = document.getElementById('ml-menu'),
+			mlmenu = new MLMenu(menuEl, {
+				breadcrumbsCtrl : true,
+				initialBreadcrumb : '主菜单',
+				backCtrl : true,
+				itemsDelayInterval : 60,
+			});
+	})();
+	function hide(id) {
+	    document.getElementById(id).style.display = "none";
+	}
+    </script>
+    @Scripts.Render("~/Js/BackStage/StoreJs/Store.js")
+    @RenderSection("ScriptSection", required: false)
+</body>
+</html>
+

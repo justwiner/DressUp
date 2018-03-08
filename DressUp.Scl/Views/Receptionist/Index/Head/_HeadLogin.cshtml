@@ -1,0 +1,26 @@
+﻿<div class="head_Login">
+    <span class="head_Login_title">Hi~欢迎来到装扮家</span>
+    <ul class="head_Login_button">
+        <li><a class="pointer" onclick="BuyerLoginBox()" id="buyerName"></a></li>
+        <li><a  href="/User/BuyerRegister" target="_blank" id="buyerRegister">【注册】</a></li>
+        <li><a class="head_Login_button_myShopCar pointer">购物车<span class="head_Login_button_myShopCarNum" id="head_Login_button_myShopCar">@Model</span></a></li>
+        <li><a class="pointer">我的订单</a></li>
+        <li><a class="pointer" id="buyerOutLogin" onclick="BuyerLogOut()">退出</a></li>
+    </ul>
+</div>
+
+<div class="shadowLayer" id="shadowLayer"></div>
+<div class="loginBox" id="loginBox">
+    <img class="butDel" src="~/Picture/FrontPic/HomePage/LoginBox/del.jpg" onclick="HideLoginBox()"/>
+    <div class="loginBox_img">
+        <img src="~/Picture/FrontPic/HomePage/LoginBox/img1.jpg" />
+    </div>
+    <div class="loginBox_right">
+        <p class="loginBoxTitle">账号密码登录</p>
+        <input type="text" class="buyerAccount" id="buyerAccount" placeholder="账号"  autocomplete="off"/>
+        <input type="password" class="buyerPassword" id="buyerPassword" placeholder="密码"  autocomplete="off"/>
+        <span class="loginError" id="loginError">(⊙o⊙)…输入的密码不对？</span>
+        <button class="loginBut" onclick="BuyerLogin()" id="loginButton">登录</button>
+        <a href="/User/BuyerRegister" target="_blank" class="register">免费注册</a>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "~/Views/Shared/BcakStageFrame.cshtml";
+}
+
+@Styles.Render("~/Css/BackStage/SaleCss/GoodsInfo.css")
+<div class="contents">
+    <div>
+        <div>
+            <span class="userinfo">
+                <span class="userinfo_">商品信息</span>
+                <span class="fa fa-database"></span>
+            </span>
+        </div>
+        @Html.Partial("~/Views/BackStage/Sale/GoodsInfo/GoodsInfoBox/_GoodsInfoBox.cshtml")
+        @Html.Partial("~/Views/BackStage/Sale/GoodsInfo/GoodsChangeInfoBox/GoodsChangeInfoBox.cshtml")
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/jquery-1.9.1.min.js")
+@Scripts.Render("~/Js/BackStage/SaleJs/ChangeGoodsInfo.js")

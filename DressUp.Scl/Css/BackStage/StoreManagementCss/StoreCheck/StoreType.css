@@ -1,0 +1,72 @@
+﻿.store_search {
+    font-size:0.7em;
+    margin-top:3%;
+}
+.store_search input{
+    padding: 0.3% 0.5%; 
+}
+.store_search button{
+    border:0;
+    background-color:grey;
+    cursor:pointer;
+    color:white;
+    padding: 0.4% 0.5%; 
+}
+.store_search button:hover{
+    background-color:rgb(6,217,149)
+}
+.fastFind {
+    display:none;
+    margin-top:1%;
+    border-bottom:1px solid black;
+}
+.fastFind-title {
+    font-size:18px;
+}
+.findBox-title {
+    margin-top:1%;
+}
+.findBox-title span{
+    font-size:16px;
+    margin-right:5%;
+    padding-right:2%;
+    border-right:1px solid grey;
+}
+.goodsTypes-title {
+    padding-right:1.5%;
+    border-right:1px solid grey;
+}
+.findBox-title a{
+    font-size:13px;
+    margin-right:2%;
+}
+.goodsTypes-title {
+    margin-right:5%;
+    vertical-align:top;
+}
+.bigType {
+    margin-top:1%;
+}
+.goodsTypes {
+    margin-top:2%;
+}
+.goodsTypes-title, .goodsTypes-box ,.types li,.types{
+    display:inline-block;
+}
+.goodsTypes-box {
+    width:60%;
+}
+.types li {
+    margin-right:1%;
+    font-size:12px;
+}
+.types {
+    margin:0;
+    width:80%;
+}
+.types-title {
+    font-size:15px;
+}
+.title {
+    font-size:18px;
+}

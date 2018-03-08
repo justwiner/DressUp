@@ -1,0 +1,21 @@
+﻿@using DressUp_Scl_Data.Data
+@{ 
+    Users user = @System.Web.HttpContext.Current.Session["User"] as Users;
+}
+<div class="main-header">
+    <a href="/HomePage/BackHome" class="main-header-title">装扮家</a>
+    <a href="/HomePage/BackHome" class="main-header-icon fa fa-home"></a>
+    <a href="#" class="main-header-icon fa fa-envelope">
+        <div class="main-header-news"><span id="newMessageNum" onclick="FindNewMessage(@user.Roles)"></span></div>
+    </a>
+    <a href="#" class="main-header-user">
+        <span class="main-header-icon fa fa-user"></span>
+        <span class="main-header-user-Name">@user.Name</span>
+        <span class="main-header-icon fa fa-angle-down"></span>
+    </a>
+    <ul id="User-Menu">
+        <li><a href="/GeneralOperation/UserInfo"><i class="fa fa-info-circle"></i>账号信息</a></li>
+        <li><a href="/GeneralOperation/ChangePassword"><i class="fa fa-edit"></i>修改密码</a></li>
+        <li><a href="/HomePage/SignOut"><i class="fa fa-power-off"></i>退出</a></li>
+    </ul>
+</div>

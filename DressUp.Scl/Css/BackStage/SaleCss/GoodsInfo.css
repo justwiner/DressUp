@@ -1,0 +1,88 @@
+﻿.goodsInfo_goodsImg {
+    margin-top:3%;
+    width:15%;
+    margin-bottom:3%;
+    border:1px solid lightgrey;
+}
+.goodsInfo_infoBox {
+    font-size:0.7em;
+}
+.goodsInfo_infoBox_left, .goodsInfo_infoBox_center, .goodsInfo_infoBox_right {
+    padding:1%;
+    display:inline-block;
+    border:1px solid grey;
+    vertical-align:top;
+    height:300px;
+    width:25%;
+}
+.goodsInfo_infoBox_left p span, .goodsInfo_infoBox_center p span, .goodsInfo_infoBox_right p span{
+    margin-left:5%;
+    color:red;
+    font-size:0.7em;
+}
+.goodsInfo_infoBox_left p textarea{
+    vertical-align:top;
+    width:70%;
+    height:100px;
+    font-size:0.7em;
+    color:gray;
+}
+.goodsInfo_changeTitle {
+    font-size:1em;
+    padding-bottom:1%;
+    border-bottom:1px dotted grey;
+}
+.goodsInfo_changeBox_left, .goodsInfo_changeBox_right {
+    padding:1%;
+    display:inline-block;
+    vertical-align:top;
+    border:1px solid grey;
+    height:300px;
+    font-size:0.7em;
+}
+.goodsInfo_changeBox_left {
+    width:22%;
+}
+.goodsInfo_changeBox_right {
+    width:53.5%;
+}
+.goodsInfo_changeBox_left textarea{
+    vertical-align:top;
+    height:100px;
+    font-size:0.7em;
+}
+.goodsInfo_changeBox_right button{
+    float:right;
+    border-radius:10%;
+    padding:1%;
+    cursor:pointer;
+    color:white;
+    border:1px solid grey;
+    background-color:grey;
+}
+.goodsInfo_changeBox_right button:hover{
+    border:1px solid rgb(6,217,149);
+    background-color:rgb(6,217,149);
+}
+.goodsChangeImgBox,.goodsChangeImgsBox {
+    margin-bottom:5%;
+    width:20%;
+    height:10%;
+    border:1px solid lightgrey;
+}
+.goodsChangeImgsBox {
+    width:20%;
+    display:inline-block;
+    vertical-align:top;
+}
+.changeImgBox{
+    padding-bottom:1%;
+    border-bottom:1px dotted black;
+}
+.changeImgButton{
+    border-radius:5%;
+    cursor:pointer;
+    color:white;
+    border:1px solid rgb(6,217,149);
+    background-color:rgb(6,217,149);
+}

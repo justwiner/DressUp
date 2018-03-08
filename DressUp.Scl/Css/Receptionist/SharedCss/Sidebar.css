@@ -1,0 +1,141 @@
+﻿.sidebarFont{
+    color:white;
+    display:block;
+    font-size:10px;
+}
+.sidebar_icon {
+    color:rgb(253,102,67);
+    font-size:25px;
+}
+.sidebar{
+    right:0;
+    height:100%;
+    background-color:#262626;
+    width:3%;
+    z-index:2001;
+    position:fixed;
+}
+.sidebar li{
+    list-style:none;
+    padding:100% 0;
+}
+.sidebar li:hover{
+    background-color:rgb(253,102,67);
+}
+.sidebar li:hover a span,.sidebar li:hover a{
+    color:white;
+}
+.sidebar ul{
+    margin-top:400%;
+    padding:0;
+}
+.shopCartsNum {
+    margin-left:30%;
+    background-color:red;
+    width:40%;
+    border-radius:50%;
+}
+
+.sidebarShopCarts {
+    right:3%;
+    width:25%;
+    height:100%;
+    background-color:white;
+    z-index:2001;
+    position:fixed;
+    display:none;
+}
+.sidebarShopCarts_Head {
+    height:5%;
+    background-color:#e5e5e5;
+    padding-top:5%;
+}
+.sidebarShopCarts_Head input{
+    vertical-align:text-bottom
+}
+.sidebarShopCarts_Head span{
+    margin-right:80%;
+    font-size:0.5em;
+}
+.sidebarShopCarts_Center {
+    height:75%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+.noGoods {
+    padding-top:30%;
+    font-size:0.5em;
+    color:grey;
+}
+.hasGoods {
+    padding:2%;
+}
+.shopCartGoods {
+    margin-top:10%;
+    border-bottom:1px dotted lightgrey;
+}
+.shopCartGoods img {
+    width:40%;
+    height:40%;
+    vertical-align:top;
+    border:1px solid lightgrey;
+}
+.goodsInfoBox {
+    width:48%;
+    text-align:left;
+    display:inline-block;
+}
+.shopCartsGoodsPrice {
+    color:red;
+}
+.shopCartGoodsCheckBox {
+    margin-bottom:30%;
+    vertical-align:middle
+}
+.goodsInfoBox span{
+    font-size:0.5em;
+    display:block;
+    margin-bottom:5%;
+    width:90%;
+    overflow:hidden;
+    white-space:nowrap; 
+    text-overflow:ellipsis
+}
+.icon-trash {
+    cursor:pointer;
+    margin-left:80%;
+}
+
+.sidebarShopCarts_Bottom {
+    height:20%;
+    background-color:#e5e5e5;
+}
+.chooseInfoBox {
+    padding:3% 0;
+}
+.chooseInfoBox div{
+    display:inline-block;
+    margin-right:4%;
+}
+.showText {
+    color:rgb(225, 68, 42)
+}
+.buyBut {
+    padding:4% 0;
+    background-color:rgb(225, 68, 42);
+}
+.buyBut button{
+    cursor:pointer;
+    width:100%;
+    background-color:rgb(225, 68, 42);
+    border:0;
+    font-size:1.2em;
+    font-family:微软雅黑;
+}
+.buyBut button span{
+    margin-right:5%;
+    color:white;
+}
+.loading {
+    margin-top:10%;
+}
